@@ -134,6 +134,13 @@ svg.ic{width:15px;height:15px;flex:0 0 auto;fill:none;stroke:currentColor;
 /* --- 히어로 -------------------------------------------------------------- */
 .hero{position:relative; overflow:hidden; background:var(--bg);
   border-bottom:3px solid var(--key); padding:clamp(88px,13vw,150px) 0 0}
+.hero-home{position:absolute; z-index:4; top:24px; right:clamp(20px,5vw,56px);
+  display:inline-flex; align-items:center; gap:7px; height:36px; padding:0 13px;
+  border:1px solid var(--hair); background:color-mix(in srgb,var(--card) 90%,transparent);
+  color:var(--mute); font-size:12.5px; font-weight:700; box-shadow:var(--shadow-1);
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); transition:.22s}
+.hero-home:hover{border-color:var(--key); color:var(--key-strong); transform:translateY(-1px)}
+.hero-home .ic{width:15px; height:15px}
 .hero-bg{position:absolute; inset:0; pointer-events:none; opacity:.5}
 .hero-bg::after{
   content:""; position:absolute; inset:0;
@@ -427,6 +434,7 @@ svg.ic{width:15px;height:15px;flex:0 0 auto;fill:none;stroke:currentColor;
 }
 @media (max-width:640px){
   body{font-size:15px}
+  .hero-home{top:18px; right:18px; height:34px; padding:0 11px}
   .calc{flex-direction:column; align-items:stretch; gap:10px}
   .calc .op{display:none}
   .qb .lbl{margin-bottom:6px}
@@ -470,7 +478,7 @@ svg.ic{width:15px;height:15px;flex:0 0 auto;fill:none;stroke:currentColor;
   .hero-meta > div{padding:11px 12px}
   .gantt{padding:13px 12px}
   .cards{gap:9px}
-  .topbar,.progress,.totop,.hero-tick,.tb-act{display:none !important}
+  .topbar,.progress,.totop,.hero-tick,.tb-act,.hero-home{display:none !important}
   .rv{opacity:1 !important; transform:none !important; transition:none !important}
   .hero{background:#fff; color:#000; border-bottom:2.5pt solid var(--key);
     padding-top:0}
