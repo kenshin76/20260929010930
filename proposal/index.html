@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B2B 전용 주문·견적 쇼핑몰 자체 구축 — 제안서</title>
+<meta name="description" content="위시켓 158766 · B2B 전용 주문·견적 쇼핑몰 자체 구축 제안서. 28,000,000원 · 87일 · 42화면 · 112.0 MD.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="B2B 전용 주문·견적 쇼핑몰 자체 구축 — 제안서">
+<meta property="og:description" content="위시켓 158766 · 28,000,000원 · 87일 · 42화면 · 112.0 MD">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="progress" id="prog" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <div class="tb-in">
+    <div class="tb-logo"><span>위시켓 158766 제안서</span></div>
+    <nav class="tb-nav" aria-label="섹션 이동">
+      <a href="#s1">과제 진단</a>
+      <a href="#s2">핵심 설계</a>
+      <a href="#s3">유사 실적</a>
+      <a href="#s4">기간·예산</a>
+      <a href="#s5">개발 일정</a>
+      <a href="#s6">참여 인원</a>
+      <a href="#s7">기술 제안</a>
+      <a href="#s8">개발 범위</a>
+      <a href="#s9">품질·유지보수</a>
+    </nav>
+    <div class="tb-act">
+      <a class="btn-i home-link" href="../index.html" aria-label="메인으로">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.5 12 3l9 7.5M5.5 9.5V20h13V9.5"></path>
+        </svg><span>메인으로</span>
+      </a>
+      <button class="btn-i" id="theme" type="button" aria-label="색 테마 전환">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path class="th-m" d="M12 3a9 9 0 0 0 0 18z" fill="none" stroke="none"></path>
+        </svg><span class="th-t">시스템</span>
+      </button>
+      <button class="btn-i" id="print" type="button" aria-label="인쇄 / PDF 저장">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"></path>
+        </svg><span>인쇄</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== HERO ====================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-kick rv"><i></i><span>위시켓 158766 · 제안서 · 2026-09-29</span></div>
+    <h1 class="rv" data-d="60">B2B 전용 주문·견적 쇼핑몰<span class="l2">자체 구축 제안</span></h1>
+    <p class="hero-lead rv" data-d="140">
+      이번 과업의 핵심은 <strong>가격이 확정되는 시점을 데이터로 보존하는 것</strong>입니다.
+      견적과 주문이 성립하는 시점의 거래처 단가·할인율·MOQ·금액을 스냅샷으로 저장하고,
+      이후 조회·정산·세금계산서 정보는 해당 스냅샷을 기준으로 처리합니다.
+    </p>
+    <dl class="hero-meta rv" data-d="220">
+      <div><dt>제안 금액 (부가세 별도)</dt>
+        <dd><span class="num" data-to="28000000">28,000,000</span><em>원</em></dd></div>
+      <div><dt>제안 기간</dt>
+        <dd><span class="num" data-to="87">87</span><em>일</em></dd></div>
+      <div><dt>화면 수</dt>
+        <dd><span class="num" data-to="42">42</span><em>화면</em></dd></div>
+      <div><dt>총 투입</dt>
+        <dd><span class="num" data-to="112" data-dec="1">112.0</span><em>MD</em></dd></div>
+    </dl>
+  </div>
+  <div class="hero-tick" aria-hidden="true">
+    <div class="tick-in">
+      <span>2026-10-19 ~ 2027-01-13 · 87일 (발주 90일 대비 3일 여유)</span>
+      <span>영업일 61일 · 내부 예비 7일 포함</span>
+      <span>사용자 24화면 + 관리자 18화면</span>
+      <span>참여 인원 8명 · 참여율 합계 128.7% · 3.73 MM</span>
+      <span>승인 게이트 5회 · 대금 4회 분할</span>
+      <span>검수 완료 후 6개월 무상 하자보수</span>
+      <span>2026-10-19 ~ 2027-01-13 · 87일 (발주 90일 대비 3일 여유)</span>
+      <span>영업일 61일 · 내부 예비 7일 포함</span>
+      <span>사용자 24화면 + 관리자 18화면</span>
+      <span>참여 인원 8명 · 참여율 합계 128.7% · 3.73 MM</span>
+      <span>승인 게이트 5회 · 대금 4회 분할</span>
+      <span>검수 완료 후 6개월 무상 하자보수</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 01 과제 진단 ====================== -->
+<section class="sec" id="s1">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">01</span>
+      <h2>가격이 언제 확정되는가 —<br>이것이 <span class="hl">화면보다 먼저</span> 결정됩니다</h2>
+      <p class="sec-lead">일반 쇼핑몰은 상품 한 건에 기본 가격 한 개를 두는 경우가 많지만, B2B는 거래처 × 상품마다 적용 가격이 달라질 수 있습니다. 견적과 주문이 생성되는 각각의 시점에 가격을 스냅샷으로 보존해야 하며, 이 구조는 1차 데이터 설계에서 확정해야 합니다.</p>
+    </div>
+
+    <div class="qb rv" data-d="60">
+      <span class="lbl">이번 과업의 난제</span>
+      이번 과업의 핵심은 <strong>가격이 확정되는 시점을 시스템 안에 명확히 정의하는 것</strong>이며,
+      이는 화면이나 성능보다 <strong>데이터 모델 설계에서 먼저 결정</strong>됩니다.
+    </div>
+
+    <h3 class="sub rv">핵심 제안 네 가지</h3>
+    <div class="grid g2 rv" data-d="60">
+      <div>
+        <div class="gc-k"><b>①</b> 가격 확정 시점</div>
+        <div class="gc-t">핵심은 가격이 확정되는 시점을 데이터로 보존하는 것입니다</div>
+        <p class="gc-d">주문 가격을 별도로 보존하지 않고 현재 상품 단가만 참조하도록 설계하면, 단가 변경이 과거 주문 조회와 통계에 영향을 줄 수 있습니다. 견적과 주문이 성립하는 시점의 거래처 단가·할인율·MOQ·금액을 <strong>스냅샷으로 저장</strong>합니다.</p>
+      </div>
+      <div>
+        <div class="gc-k"><b>②</b> 적용하는 운영 경험</div>
+        <div class="gc-t">결제·승인·거래 플랫폼의 장기 운영 경험을 적용합니다</div>
+        <p class="gc-d">100개 이상 고객사가 이용하는 통합 빌링 시스템에서 중복 결제 차단과 단계별 결제 로그를 운영했고, 쿠폰 시스템에서는 승인·반려와 순차 검증을, NFT 판매 플랫폼에서는 사용자몰·관리자몰과 거래 이력을 다뤘습니다.</p>
+      </div>
+      <div>
+        <div class="gc-k"><b>③</b> 예산과 범위</div>
+        <div class="gc-t">예산 안에서 상위 기능군을 유지하고 세부 구현 깊이를 조정했습니다</div>
+        <p class="gc-d">전체 추정 하한 185 MD 대비 확보 공수는 <strong>112 MD</strong>입니다. 42개 화면으로 관련 기능을 통합하고, 부분 반품·옵션 조합·분할 배송 등 일부 세부 기능은 1차 범위에서 제외했습니다. <strong>조정 내역과 교환 가능한 범위</strong>는 「04 기간·예산」과 「08 개발 범위」에 명시했습니다.</p>
+      </div>
+      <div>
+        <div class="gc-k"><b>④</b> 검증과 이관</div>
+        <div class="gc-t">검증·미확정 범위·이관 조건을 계약 전에 명확히 합니다</div>
+        <p class="gc-d">가격 규칙과 견적 전환 정의서는 축소하지 않고, QA·인수 시험·운영 문서에 11 MD를 배정했습니다. 미확정 4건은 별도 견적으로 분리했으며, 총 일정은 <strong>87일</strong>입니다. 검수 완료 후 6개월 무상 하자보수를 제안합니다.</p>
+      </div>
+    </div>
+
+    <h3 class="sub rv">설계 관점 세 가지</h3>
+    <div class="cards rv" data-d="60">
+      <article class="card">
+        <div class="card-bar"></div>
+        <div class="gc-k">관점 ①</div>
+        <div class="gc-t">가격은 “조회”가 아니라 “확정”으로 다룹니다</div>
+        <p class="gc-d">거래처별 단가를 전 조합(거래처 × 상품)으로 미리 만들어 두지 않습니다. <strong>기본가 → 등급 할인 → 거래처 개별 단가</strong>의 3단 우선순위로 조회하고, 견적 확정·주문 생성 시점에만 그 결과를 해당 행에 복제 저장합니다. 거래처 300곳 × 상품 5,000종이면 전 조합은 150만 행이지만, 3단 조회 구조에서는 실제 등록된 예외만 저장하면 됩니다.</p>
+      </article>
+      <article class="card">
+        <div class="card-bar"></div>
+        <div class="gc-k">관점 ②</div>
+        <div class="gc-t">견적과 주문은 별개 문서이되, 이력으로 연결되어야 합니다</div>
+        <p class="gc-d">견적서를 주문으로 전환할 때 품목을 다시 담게 하면 견적과 주문 금액이 달라졌을 때 그 원인을 추적하기 어렵습니다. 견적 행을 주문 행으로 <strong>복제하고 원본 견적 번호를 남겨</strong>, 주문 상세에서 근거 견적을 언제든 역추적할 수 있게 합니다.</p>
+      </article>
+      <article class="card">
+        <div class="card-bar"></div>
+        <div class="gc-k">관점 ③</div>
+        <div class="gc-t">MOQ는 장바구니 담기와 주문 확정 시점에 반복 검증합니다</div>
+        <p class="gc-d">장바구니에 담은 뒤 관리자가 MOQ를 바꾸는 경우가 실제로 발생합니다. 담기·주문서 작성·최종 확정의 <strong>3지점에서 검증</strong>하고, 최종 확정 단계에서 검증 기준을 충족하지 못하면 대상 품목과 사유를 행 단위로 표시합니다.</p>
+      </article>
+    </div>
+
+    <h3 class="sub rv">확인이 필요한 사항</h3>
+    <p class="rv" style="max-width:66ch">계약 전 또는 착수 1주차에 확인을 요청드립니다. 답변에 따라 공수가 달라질 수 있는 항목만 정리했습니다.</p>
+    <div class="tbl-x rv" data-d="60">
+      <div class="tbl" style="grid-template-columns:44px minmax(230px,1fr) minmax(250px,1.1fr)">
+        <div class="hd"><b class="c">#</b><b>확인 사항</b><b>왜 필요한가</b></div>
+        <div><span class="c num">1</span><span>거래처 수 · 취급 상품 수 · 일 평균 주문 건수</span><span>공고에 수치가 없어 규모 가정값으로 설계했습니다. 가정을 크게 벗어나면 인덱스·엑셀 처리 방식이 달라집니다</span></div>
+        <div><span class="c num">2</span><span>거래처 등급 체계 (등급 개수, 등급이 결정하는 것)</span><span>등급이 가격만 결정하는지, 메뉴 노출까지 결정하는지에 따라 권한 모델의 복잡도가 달라집니다</span></div>
+        <div><span class="c num">3</span><span>할인율과 개별 단가가 동시에 걸릴 때의 우선순위</span><span>업체마다 규칙이 다릅니다. 3단 우선순위가 귀사 실무와 맞는지 확인이 필요합니다</span></div>
+        <div><span class="c num">4</span><span>견적서에 유효기간이 있는지, 만료 후 주문 전환 허용 여부</span><span>만료 견적의 재가격 산정 규칙이 필요해집니다</span></div>
+        <div><span class="c num">5</span><span>입금 기한(주문 후 며칠)과 기한 초과 시 자동 취소의 재고 처리</span><span>취소 시점과 재고 복원 시점을 확정해야 합니다</span></div>
+        <div><span class="c num">6</span><span>세금계산서 “정보 관리”의 범위 — 정보 등록·조회까지인지, 발행 요청 접수까지인지</span><span>발행 자체는 2차 범위로 이해했습니다</span></div>
+        <div><span class="c num">7</span><span>반품 시 부분 반품 허용 여부</span><span>부분 반품은 금액 재계산과 부분 환불이 추가됩니다</span></div>
+        <div><span class="c num">8</span><span>공고에 기재된 <strong>내부 PM 1명 외에 협업할 담당자</strong>와 각자의 역할</span><span>보고 체계의 수신자와 게이트 승인 결정권자를 확정합니다</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 02 핵심 설계 ====================== -->
+<section class="sec alt" id="s2">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">02</span>
+      <h2>가격 정합성을 지키는 <span class="hl">여섯 가지 핵심 설계</span></h2>
+      <p class="sec-lead">공고에서 가장 중요하게 언급된 「거래처별 가격 · 최소 주문 수량 · 견적→주문 흐름」에 대해, 각 요구를 어떤 구조로 구현하는지 정리했습니다.</p>
+    </div>
+
+    <div class="grid rv" data-d="60">
+      <div>
+        <div class="gc-k">설계 ①</div>
+        <div class="gc-t">거래처별 공급가 · 할인율 — 3단 조회</div>
+        <p class="gc-d">모든 가격 조합을 하나의 테이블에 미리 생성하지 않고 <strong>① 상품 기본가 → ② 등급 할인율 → ③ 거래처 개별 단가</strong>의 3단으로 둡니다. 조회 시 ③이 있으면 ③, 없으면 ①에 ②를 적용합니다. 전 조합 150만 행을 만들지 않고 <strong>실제 등록된 예외만</strong> 저장합니다.</p>
+      </div>
+      <div>
+        <div class="gc-k">설계 ②</div>
+        <div class="gc-t">해당 거래처에게만 보이는 가격</div>
+        <p class="gc-d">상품 조회 API가 <strong>로그인 토큰에서 거래처 ID를 추출해 조회 조건에 강제로 적용</strong>합니다. 클라이언트가 전달하는 거래처 ID는 조회 기준으로 사용하지 않습니다. 타사 가격을 요청하면 서버가 접근을 차단하고 감사 로그를 남깁니다.</p>
+      </div>
+      <div>
+        <div class="gc-k">설계 ③</div>
+        <div class="gc-t">주문 시점 가격 확정 — 스냅샷</div>
+        <p class="gc-d">견적 확정·주문 생성 시점의 <strong>단가·할인율·수량·공급가·부가세·합계를 그 행에 스냅샷으로 복제 저장</strong>합니다. 이후 모든 조회·통계·세금계산서 정보는 마스터가 아닌 이 스냅샷만 읽습니다. 단가 마스터는 <strong>변경 이력(누가·언제·얼마에서 얼마로)</strong>을 별도 테이블에 남겨 두 방향에서 증명합니다.</p>
+      </div>
+      <div>
+        <div class="gc-k">설계 ④</div>
+        <div class="gc-t">장바구니에 담은 뒤 단가가 바뀐 경우</div>
+        <p class="gc-d">장바구니 행에 <strong>담은 시점의 단가를 함께 저장</strong>해 두고, 주문 확정 직전에 현재 단가와 대조합니다. 차이가 있으면 <strong>변동 품목을 행 단위로 고지하고 재확인을 받은 뒤에만</strong> 주문이 생성됩니다. 거래처가 모르는 사이에 금액이 바뀌는 경로를 없앱니다.</p>
+      </div>
+      <div>
+        <div class="gc-k">설계 ⑤</div>
+        <div class="gc-t">최소 주문 수량(MOQ) · 주문 단위</div>
+        <p class="gc-d">상품마다 MOQ와 주문 단위(예: 12개 단위)를 두고, <strong>장바구니 담기 · 주문서 작성 · 최종 주문 확정의 3지점에서 검증</strong>합니다. 장바구니 저장 후 관리자가 MOQ를 상향한 경우도 최종 확정 단계에서 감지하며, 기준을 충족하지 못한 품목과 사유를 <strong>행 단위로</strong> 표시합니다.</p>
+      </div>
+      <div>
+        <div class="gc-k">설계 ⑥</div>
+        <div class="gc-t">견적 → 주문 전환</div>
+        <p class="gc-d">전환 시 견적 행을 <strong>주문 행으로 복제하고 원본 견적 번호를 남깁니다.</strong> 전환 과정에서 가격을 다시 산정하지 않으므로 견적 확정 시점의 금액과 수량이 주문에 그대로 유지되며, 주문 상세에서 근거 견적을 역추적할 수 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="qb rv" data-d="60">
+      <span class="lbl">네 가지 요구를 하나의 구조로</span>
+      「주문 시점 가격 확정」·「견적→주문 금액 일치」·「기간별 매출 통계의 불변성」·「세금계산서 정보의 정확성」은
+      <strong>주문 행 스냅샷</strong>을 공통 기준으로 삼습니다. 스냅샷으로 금액을 고정하고, 견적 번호 역추적으로 근거를 남기며,
+      통계와 세금계산서 정보도 같은 원천 데이터를 사용해 네 영역의 정합성을 일관되게 유지합니다.
+    </div>
+
+    <h3 class="sub rv">이 설계를 어떻게 검증하는가 — 인수 기준 상위 6항목</h3>
+    <div class="tbl-x rv" data-d="60">
+      <div class="tbl" style="grid-template-columns:minmax(150px,.85fr) minmax(250px,1.2fr) minmax(190px,1fr)">
+        <div class="hd"><b>항목</b><b>측정 조건</b><b>합격 기준</b></div>
+        <div class="em"><span><strong>과거 주문 금액 불변</strong></span><span>단가 마스터 10종 변경 후, 변경 전 생성된 주문 100건 재조회</span><span><strong>주문 시점 금액과 100% 일치</strong></span></div>
+        <div class="em"><span><strong>견적 ↔ 주문 금액 일치</strong></span><span>견적 50건을 주문으로 전환</span><span>전 건 금액·수량 일치, 주문 상세에서 원본 견적 번호 역추적 100%</span></div>
+        <div class="em"><span><strong>장바구니 담은 뒤 단가 변경</strong></span><span>장바구니에 담긴 품목 50건의 단가를 관리자가 변경한 뒤 주문 확정 시도</span><span><strong>전 건 변동 고지 후 재확인</strong>, 재확인 없이는 주문 미생성</span></div>
+        <div class="em"><span><strong>MOQ 검증</strong></span><span>MOQ 미달·주문 단위 위반 각 50건 시도(담기/주문서/최종 확정 3지점)</span><span>3지점 모두 차단, 기준을 충족하지 못한 품목·사유를 행 단위로 표시</span></div>
+        <div><span>배송지 불변</span><span>배송지 주소록 20건 수정 후 과거 주문 50건 재조회</span><span>주문 시점 배송지와 100% 일치</span></div>
+        <div class="em"><span><strong>가격 격리</strong></span><span>거래처 A 계정으로 거래처 B 상품·가격 API 200회 호출</span><span><strong>전 건 서버에서 차단하고 감사 로그 기록</strong>(화면에서만 숨기는 방식이 아님)</span></div>
+      </div>
+    </div>
+    <p class="cap rv">인수 기준은 전체 14항목입니다. 나머지 8항목(성능·보안·엑셀·재고 동시성·반응형 등)은 「09 품질·유지보수」에 있습니다.</p>
+  </div>
+</section>
+
+<!-- ====================== 03 유사 실적 ====================== -->
+<section class="sec" id="s3">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">03</span>
+      <h2>업종이 아니라 <span class="hl">업무 구조</span>가 같은 실적</h2>
+      <p class="sec-lead">업종의 동일성보다 업무 구조의 유사성을 기준으로 실적을 선정했습니다. 각 건에 참여 기간·참여율·관련 기술과 이번 과업으로의 연결을 함께 적었습니다.</p>
+    </div>
+
+    <div class="cards rv" data-d="60" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+      <article class="card">
+        <div class="card-bar"></div>
+        <div class="gc-k">실적 ① · 결제 정합성</div>
+        <div class="gc-t">인앱·PG 통합 빌링 시스템</div>
+        <div class="tbl" style="grid-template-columns:1fr;gap:1px;margin:13px 0 15px;font-size:12.5px">
+          <div><span><b style="display:inline;background:none;padding:0">참여 기간</b> 2017.07 ~ 2026.07 (9년) · <b style="display:inline;background:none;padding:0">참여율</b> 100%</span></div>
+          <div><span><b style="display:inline;background:none;padding:0">관련 기술</b> Spring Boot · Java · MySQL · Redis</span></div>
+        </div>
+        <p class="cap" style="margin-top:-4px">Spring Boot · Java · MySQL은 이번 제안 스택과 같습니다. <strong>Redis는 위 시스템의 대량 트래픽 처리에 사용했으나, 이번 과업의 예상 규모(부록 B)에서는 우선 적용하지 않습니다.</strong></p>
+        <p class="gc-d">7개 스토어(Google Play, App Store, One Store, Huawei, Amazon, 갤럭시, Steam)의 인앱결제와 국내외 PG(마이카드·엑솔라·포트원) 직접 결제를 <strong>하나의 API로 통합</strong>해 100개 이상 고객사의 결제 인프라로 운영하고 있습니다.</p>
+        <ul class="gc-d" style="margin-top:11px">
+          <li>마켓 상품 ID(PID) 기준 구매 플로우, <strong>Transaction ID로 동일 영수증 중복 지급 차단</strong></li>
+          <li>구매 클릭 · 구매 완료 · 지급 완료의 <strong>3단계 로그</strong>로 금액이 어긋난 단계를 사후 특정</li>
+          <li>7개 스토어 환불 API 연동, 환불 유저 재결제까지 상용에서 처리</li>
+          <li><strong>PG 직접 결제 연동은 2024년 1월에 적용</strong>, 확인 가능한 참여 기간인 2026년 7월까지 2년 6개월간 관련 운영 수행</li>
+        </ul>
+        <div class="qb" style="margin:17px 0 0">
+          <span class="lbl">▶ 연결</span>
+          이번 과업의 「무통장·PG 이중 결제 수단, 취소·환불 처리」에는 위 시스템의 <strong>중복 결제 차단과 단계별 결제 로그를 통한 정합성·이력 관리 경험</strong>을 적용합니다. 주문 시점 가격 확정은 별도의 주문 스냅샷 모델로 구현하며, 결제 식별자와 주문 가격 스냅샷의 역할을 구분합니다.
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-bar"></div>
+        <div class="gc-k">실적 ② · 승인 워크플로</div>
+        <div class="gc-t">쿠폰 발급·교환 시스템</div>
+        <div class="tbl" style="grid-template-columns:1fr;gap:1px;margin:13px 0 15px;font-size:12.5px">
+          <div><span><b style="display:inline;background:none;padding:0">참여 기간</b> 2013.06 ~ 2026.07 (13년 1개월) · <b style="display:inline;background:none;padding:0">참여율</b> 100%</span></div>
+          <div><span><b style="display:inline;background:none;padding:0">관련 기술</b> PHP · CodeIgniter · MySQL · MariaDB · React</span></div>
+        </div>
+        <p class="gc-d">PHP·CodeIgniter·MySQL 기반 상용 시스템으로, <strong>요청자와 승인자의 권한을 분리</strong>한 발급 워크플로를 모회사·전신 조직 수행 기간부터 법인 설립 이후까지 이어서 운영한 경험이 있습니다.</p>
+        <ul class="gc-d" style="margin-top:11px">
+          <li>요청 후 대기 상태에서 <strong>완료 또는 반려로 분기</strong>, 반려 시 사유 기록. 승인 완료 후 발행 수량은 <strong>추가만 허용</strong></li>
+          <li>등록 시 계정 · 미사용 여부 · 유효기간 · 한도 · 수량을 <strong>순차 검증</strong>하고 첫 실패 지점에서 사유 반환</li>
+          <li>전체 이력을 콘솔에서 조회하고 <strong>Excel로 출력</strong></li>
+        </ul>
+        <p class="cap">2013년 6월 착수해 2013년 10월 오픈했고, 2016년 플랫폼 표준 기능으로 통합되었습니다. 참여 기간 13년 1개월은 기획 착수부터 2026년 7월까지의 전체 구간이며, <strong>당사 법인 설립(2016년 9월) 이전 실적은 현재 참여 인력이 모회사·전신 조직에서 수행한 기간</strong>입니다.</p>
+        <div class="qb" style="margin:17px 0 0">
+          <span class="lbl">▶ 연결</span>
+          이번 과업의 「기업회원 가입 승인·반려」, 「거래처 등급별 권한」, 「MOQ·주문 단위 검증」, 「엑셀 업로드/다운로드」는 위 시스템의 <strong>승인 워크플로 + 순차 검증 + 이력·엑셀 출력</strong>과 같은 구조입니다.
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-bar"></div>
+        <div class="gc-k">실적 ③ · 사용자몰 + 관리자몰</div>
+        <div class="gc-t">블록체인 NFT 판매 플랫폼</div>
+        <div class="tbl" style="grid-template-columns:1fr;gap:1px;margin:13px 0 15px;font-size:12.5px">
+          <div><span><b style="display:inline;background:none;padding:0">참여 기간</b> 2021.11 ~ 2026.05 (4년 6개월) · <b style="display:inline;background:none;padding:0">참여율</b> 100%</span></div>
+          <div><span><b style="display:inline;background:none;padding:0">관련 기술</b> Next.js · React · Node.js · NestJS · MySQL · Redis</span></div>
+        </div>
+        <p class="gc-d">거래 플랫폼과 운영 백오피스를 함께 구축했습니다. 회원 인증, 스토어, 판매 관리, 데이터 동기화를 <strong>역할별 서비스로 분리</strong>했고, 소유권·구매 이력·발행 상태의 정합성을 참여 기간 동안 상용 환경에서 관리했습니다.</p>
+        <p class="cap">2021년 11월 착수해 2022년 8월 정식 배포했으며, 당사의 참여 종료 시점인 2026년 5월까지 <strong>3년 9개월간 상용 운영 경험</strong>을 보유하고 있습니다(참여 기간 4년 6개월에는 기획·개발·테스트 9개월이 포함됩니다).</p>
+        <div class="qb" style="margin:17px 0 0">
+          <span class="lbl">▶ 연결</span>
+          이번 과업의 <strong>사용자몰 + 관리자몰 이중 구조</strong>와 「주문 상태·이력의 일관성」에 위 플랫폼의 거래 화면·백오피스 분리 경험을 적용할 수 있습니다.
+        </div>
+      </article>
+    </div>
+
+    <div class="warn rv" data-d="60">
+      <strong>직접 실적 범위에 대한 안내 —</strong> 당사는 「B2B 도매 쇼핑몰」과 동일한 업종의 직접 구축 실적은 보유하고 있지 않습니다.
+      위 세 건은 결제·승인·거래·운영 백오피스라는 구조적 유사성을 기준으로 선정했습니다.
+      빌링 시스템의 확인 가능한 참여 기간은 9년이며, <strong>국내외 PG(마이카드·엑솔라·포트원) 직접 연동 경험은 2024년 1월부터 2026년 7월까지 2년 6개월</strong>입니다.
+      빌링 시스템의 Spring Boot·Java·MySQL과 NFT 플랫폼의 Next.js·React·MySQL은 이번 제안 스택과 일치합니다.
+      B2B 전용 정책은 S1·S2에서 고객사의 실제 규칙을 확인해 설계하겠습니다.
+    </div>
+
+    <h3 class="sub rv">디자인 역량</h3>
+    <p class="rv" style="max-width:74ch">2024년 3~7월 진행한 「브랜드 아이덴티티 개선」 프로젝트에서 그리드·타이포그래피·컬러 원칙과 반응형 컴포넌트를 디자인 시스템으로 문서화하고, Figma Dev Mode 기반 개발 핸드오프와 반응형 QA를 수행했습니다. 이번 과업에서도 업무형 화면을 재사용 가능한 컴포넌트로 설계하겠습니다.</p>
+  </div>
+</section>
+
+<!-- ====================== 04 기간·예산 ====================== -->
+<section class="sec alt" id="s4">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">04</span>
+      <h2>예산 안에서 무엇을 유지하고<br><span class="hl">무엇을 조정했는지</span> 전부 적었습니다</h2>
+      <p class="sec-lead">공고의 기능 목록 전체를 당사 기준으로 산정하면 185~269 MD(46,250,000~67,250,000원)입니다. 확보된 112 MD는 추정 하한의 60.5%이며, 73 MD가 부족합니다. 부족분을 어디서 조정했는지 항목별로 공개합니다.</p>
+    </div>
+
+    <h3 class="sub rv">정합성 계산 — 먼저 보여드립니다</h3>
+
+    <div class="calc rv" data-d="40">
+      <div class="ci"><div class="ck">① 발주 예산 (부가세 별도)</div><div class="cv"><span class="num" data-to="28000000">28,000,000</span>원</div></div>
+      <div class="op">÷</div>
+      <div class="ci"><div class="ck">적용 단가 (혼합 평균)</div><div class="cv"><span class="num" data-to="250000">250,000</span>원/MD</div></div>
+      <div class="op">=</div>
+      <div class="ci"><div class="ck">확보 공수</div><div class="cv k"><span class="num" data-to="112" data-dec="1">112.0</span> MD = <span class="num" data-to="3.73" data-dec="2">3.73</span> MM</div></div>
+    </div>
+    <div class="calc rv" data-d="90">
+      <div class="ci"><div class="ck">② 확보 공수</div><div class="cv"><span class="num" data-to="3.73" data-dec="2">3.73</span> MM</div></div>
+      <div class="op">÷</div>
+      <div class="ci"><div class="ck">달력 기간</div><div class="cv">87일 ÷ 30일</div></div>
+      <div class="op">=</div>
+      <div class="ci"><div class="ck">평균 투입</div><div class="cv k"><span class="num" data-to="1.29" data-dec="2">1.29</span> FTE</div></div>
+    </div>
+
+    <div class="grid g4 rv" data-d="140">
+      <dl class="stat">
+        <dt>③ 기간 → 일수</dt>
+        <dd><span class="num" data-to="87">87</span><em>일</em></dd>
+        <div class="sn">2026-10-19 ~ 2027-01-13 · 영업일 61일<br>발주 90일 대비 <strong>3일 여유</strong>. 내부 예비 7일은 87일 안에 포함(81~87일차)</div>
+      </dl>
+      <dl class="stat">
+        <dt>④ 데이터 규모 (5년 누적)</dt>
+        <dd><span class="num" data-to="72">72</span><em>만 행</em></dd>
+        <div class="sn">거래처·상품 전 조합 150만 행을 포함하면 5년 누적 데이터는 최대 약 218만 행.<br><strong>두 경우 모두 파티셔닝·샤딩·캐시 계층 불필요</strong> — 복합 인덱스로 충족</div>
+      </dl>
+      <dl class="stat">
+        <dt>⑤ 회사 임직원</dt>
+        <dd><span class="num" data-to="205">205</span><em>명</em></dd>
+        <div class="sn">2026-08-12 기준 · 설립 2016.09<br>회사 소개서와 동일한 기준을 적용했습니다</div>
+      </dl>
+      <dl class="stat">
+        <dt>추정 하한 대비</dt>
+        <dd><span class="num" data-to="60.5" data-dec="1">60.5</span><em>%</em></dd>
+        <div class="sn">전체 추정 185~269 MD 중 확보 112.0 MD<br><strong>73 MD 부족</strong> — 조정 내역은 아래 탭 2</div>
+      </dl>
+    </div>
+
+    <div class="qb rv" data-d="60">
+      <span class="lbl">적용 단가 250,000원/MD (부가세 별도)</span>
+      역할별 경력과 투입 비중을 반영한 <strong>본 과업의 혼합 평균 단가</strong>입니다.
+      PM·QA·문서화·배포·방문 비용은 112 MD에 포함하고, 6개월 무상 하자보수 비용은 혼합 단가에 반영해 별도 청구하지 않습니다.
+      서버 이용료·도메인·PG 결제 수수료·이메일 발송 비용 등 직접비는 공고에 따라 발주사가 부담합니다.
+      내부 예비 7일은 추가 공수가 아니라 검수 보완을 위한 <strong>일정 버퍼</strong>이며, 보완 작업이 발생하면 112 MD 안에서 단계별 잔여 공수를 재배정합니다.
+    </div>
+
+    <h3 class="sub rv">견적 · 범위 조정 · 별도 견적</h3>
+    <div class="tabs rv" data-d="40">
+      <div class="tab-b" role="tablist" aria-label="견적 상세">
+        <button type="button" role="tab" aria-selected="true">표 1 · 기능별 견적</button>
+        <button type="button" role="tab" aria-selected="false">표 2 · 1차 범위 조정 73 MD</button>
+        <button type="button" role="tab" aria-selected="false">별도 견적 · 권장 조합</button>
+      </div>
+
+      <!-- 탭 1 -->
+      <div class="tab-p on" role="tabpanel" data-t="표 1 · 기능별 견적 (1차 범위 · 112.0 MD · 28,000,000원)">
+        <div class="tbl-x">
+          <div class="tbl" style="grid-template-columns:minmax(230px,1.6fr) 74px 104px 98px 118px">
+            <div class="hd"><b>항목</b><b class="r">MD</b><b class="r">금액</b><b class="c">전체 추정</b><b class="r">추정 하한 대비</b></div>
+            <div><span>요구사항 정의·화면 설계 (42화면)</span><span class="r">15.0</span><span class="r">3,750,000</span><span class="c num">26~38</span><span class="r">58%<i class="pbar" style="--w:58%"><i></i></i></span></div>
+            <div class="em"><span><strong>거래처 가격·MOQ·견적 전환 규칙 정의서</strong></span><span class="r">4.0</span><span class="r">1,000,000</span><span class="c num">4~7</span><span class="r"><strong>100%</strong><i class="pbar hi" style="--w:100%"><i></i></i></span></div>
+            <div><span>UI·UX 디자인 (42화면 · 반응형)</span><span class="r">15.0</span><span class="r">3,750,000</span><span class="c num">30~42</span><span class="r">50%<i class="pbar" style="--w:50%"><i></i></i></span></div>
+            <div><span>공통 기반 — 기업회원·가입 승인·등급/권한·API 규격</span><span class="r">8.0</span><span class="r">2,000,000</span><span class="c num">14~20</span><span class="r">57%<i class="pbar" style="--w:57%"><i></i></i></span></div>
+            <div><span>상품·카테고리·재고</span><span class="r">6.0</span><span class="r">1,500,000</span><span class="c num">10~14</span><span class="r">60%<i class="pbar" style="--w:60%"><i></i></i></span></div>
+            <div class="em"><span><strong>거래처별 공급가·할인율·MOQ 엔진</strong></span><span class="r">9.0</span><span class="r">2,250,000</span><span class="c num">12~18</span><span class="r"><strong>75%</strong><i class="pbar hi" style="--w:75%"><i></i></i></span></div>
+            <div><span>장바구니·대량 주문</span><span class="r">4.0</span><span class="r">1,000,000</span><span class="c num">7~10</span><span class="r">57%<i class="pbar" style="--w:57%"><i></i></i></span></div>
+            <div class="em"><span><strong>견적 요청·견적서·주문 전환</strong></span><span class="r">8.0</span><span class="r">2,000,000</span><span class="c num">11~16</span><span class="r"><strong>73%</strong><i class="pbar hi" style="--w:73%"><i></i></i></span></div>
+            <div><span>주문·결제(PG·무통장)·취소·반품</span><span class="r">10.5</span><span class="r">2,625,000</span><span class="c num">18~26</span><span class="r">58%<i class="pbar" style="--w:58%"><i></i></i></span></div>
+            <div><span>배송·송장·재주문·마이페이지</span><span class="r">5.0</span><span class="r">1,250,000</span><span class="c num">9~13</span><span class="r">56%<i class="pbar" style="--w:56%"><i></i></i></span></div>
+            <div><span>관리자 운영 — 주문·콘텐츠·문의</span><span class="r">5.0</span><span class="r">1,250,000</span><span class="c num">10~14</span><span class="r">50%<i class="pbar" style="--w:50%"><i></i></i></span></div>
+            <div><span>통계·엑셀 업로드/다운로드</span><span class="r">4.5</span><span class="r">1,125,000</span><span class="c num">8~12</span><span class="r">56%<i class="pbar" style="--w:56%"><i></i></i></span></div>
+            <div><span>이메일 알림</span><span class="r">2.0</span><span class="r">500,000</span><span class="c num">3~5</span><span class="r">67%<i class="pbar" style="--w:67%"><i></i></i></span></div>
+            <div><span>인프라 구축·배포·보안</span><span class="r">5.0</span><span class="r">1,250,000</span><span class="c num">8~12</span><span class="r">62%<i class="pbar" style="--w:62%"><i></i></i></span></div>
+            <div class="em"><span><strong>QA·인수 시험·운영 매뉴얼</strong></span><span class="r">11.0</span><span class="r">2,750,000</span><span class="c num">15~22</span><span class="r"><strong>73%</strong><i class="pbar hi" style="--w:73%"><i></i></i></span></div>
+            <div class="tot"><span><strong>합계</strong></span><span class="r"><strong>112.0</strong></span><span class="r"><strong>28,000,000</strong></span><span class="c num"><strong>185~269</strong></span><span class="r"><strong>60.5%</strong></span></div>
+          </div>
+        </div>
+        <p class="cap">굵게 표시한 네 항목은 가격 정합성과 산출물 완성도에 직접 연결됩니다. 이 항목에는 추정 하한의 <strong>73~100%</strong>를 우선 배정하고, 나머지 항목은 화면 통합과 구현 깊이 조정으로 <strong>50~67%</strong>를 배정했습니다.</p>
+      </div>
+
+      <!-- 탭 2 -->
+      <div class="tab-p" role="tabpanel" data-t="표 2 · 1차 범위 조정 내역 — 추정 하한 대비 73 MD">
+        <p class="gc-d" style="margin-bottom:15px">추정 하한과 1차 배정의 차이를 항목별로 정리했습니다. 세부 제외 범위는 「08 개발 범위」와 동일합니다.</p>
+        <div class="tbl-x">
+          <div class="tbl" style="grid-template-columns:minmax(180px,.95fr) 62px 62px 62px minmax(260px,1.5fr)">
+            <div class="hd"><b>항목</b><b class="r">하한</b><b class="r">배정</b><b class="r">차</b><b>1차 범위 조정 내용</b></div>
+            <div><span>UI·UX 디자인</span><span class="r">30</span><span class="r">15.0</span><span class="r"><strong>15.0</strong></span><span>시안 <strong>1안</strong> 제시(2안 비교 미수행), 목록·상세 화면 12개를 공통 컴포넌트 재사용으로 처리, 커스텀 일러스트·아이콘 제작 대신 오픈 아이콘 세트 사용</span></div>
+            <div><span>요구사항 정의·화면 설계</span><span class="r">26</span><span class="r">15.0</span><span class="r"><strong>11.0</strong></span><span>화면 <strong>51→42 통합</strong>(약 11 MD), 클릭 가능한 프로토타입 미제작(와이어프레임까지)</span></div>
+            <div><span>주문·결제(PG·무통장)·취소·반품</span><span class="r">18</span><span class="r">10.5</span><span class="r"><strong>7.5</strong></span><span><strong>부분 반품·부분 환불 미포함</strong>(전량 단위), PG 결제 수단 카드·계좌이체 2종 한정</span></div>
+            <div><span>공통 기반</span><span class="r">14</span><span class="r">8.0</span><span class="r"><strong>6.0</strong></span><span>관리자 권한 <strong>3종 고정</strong>, 권한을 화면에서 세분 편집하는 UI 미제공(코드 기반 매핑)</span></div>
+            <div><span>관리자 운영</span><span class="r">10</span><span class="r">5.0</span><span class="r"><strong>5.0</strong></span><span>배너 <strong>홈 상단 1영역</strong> 한정, 문의 답변 템플릿·자동 분류 미포함</span></div>
+            <div><span>상품·카테고리·재고</span><span class="r">10</span><span class="r">6.0</span><span class="r"><strong>4.0</strong></span><span>카테고리 <strong>2단 고정</strong>(무한 트리 미지원), <strong>옵션·규격 조합 미지원</strong>(상품 1건 = SKU 1개)</span></div>
+            <div><span>배송·송장·재주문·마이페이지</span><span class="r">9</span><span class="r">5.0</span><span class="r"><strong>4.0</strong></span><span><strong>부분 출고·분할 배송 미지원</strong>(주문 1건 = 출고 1건)</span></div>
+            <div><span>QA·인수 시험·운영 매뉴얼</span><span class="r">15</span><span class="r">11.0</span><span class="r"><strong>4.0</strong></span><span>브라우저 3종 전수는 <strong>핵심 18화면</strong>, 나머지 24화면은 Chrome 전수. 11.0 중 3.0은 운영 매뉴얼·이관 문서</span></div>
+            <div><span>통계·엑셀</span><span class="r">8</span><span class="r">4.5</span><span class="r"><strong>3.5</strong></span><span><strong>고정 리포트 3종</strong>(기간별 매출·거래처별·상품별), 사용자 정의 리포트 빌더 미포함</span></div>
+            <div><span>장바구니·대량 주문</span><span class="r">7</span><span class="r">4.0</span><span class="r"><strong>3.0</strong></span><span>장바구니 <strong>1개</strong>(즐겨찾기 주문서 다중 저장 미포함)</span></div>
+            <div><span>인프라 구축·배포·보안</span><span class="r">8</span><span class="r">5.0</span><span class="r"><strong>3.0</strong></span><span><strong>단일 리전 단일 애플리케이션 인스턴스</strong>(이중화·오토스케일링 미구성), RDS 자동 백업·복원 절차 구성</span></div>
+            <div><span>견적 요청·견적서·주문 전환</span><span class="r">11</span><span class="r">8.0</span><span class="r"><strong>3.0</strong></span><span>견적서 <strong>PDF 서식 1종</strong>, 다중 버전 견적 비교 화면 미포함</span></div>
+            <div><span>거래처별 공급가·할인율·MOQ 엔진</span><span class="r">12</span><span class="r">9.0</span><span class="r"><strong>3.0</strong></span><span><strong>기간 한정 특가·수량 구간별 단가 미포함</strong>(거래처 단가·등급 할인까지)</span></div>
+            <div><span>이메일 알림</span><span class="r">3</span><span class="r">2.0</span><span class="r"><strong>1.0</strong></span><span>템플릿을 코드에 두고 문구 변경은 배포로 반영(템플릿 관리 화면 미제공)</span></div>
+            <div class="em"><span>거래처 가격·MOQ·견적 전환 규칙 정의서</span><span class="r">4</span><span class="r">4.0</span><span class="r"><strong>0</strong></span><span><strong>조정 없음</strong> — 가격 정합성의 핵심 항목으로 전체 범위를 유지</span></div>
+            <div class="tot"><span><strong>합계</strong></span><span class="r"><strong>185</strong></span><span class="r"><strong>112.0</strong></span><span class="r"><strong>73.0</strong></span><span></span></div>
+          </div>
+        </div>
+        <p class="cap">위 조정 항목은 <strong>G2(25일차) 전까지 총 112.0 MD가 유지되는 범위에서 서로 교환</strong>할 수 있으며, 이 경우 추가 비용이 없습니다. 총 MD가 늘어나는 순증(예: 화면 1개 추가 = 약 1.2 MD)은 변경 절차를 따릅니다. 참고로 전체 범위를 추정 하한 수준으로 수행하면 <strong>185 MD = 46,250,000원</strong>입니다. 예산 증액이 가능하다면 세부 기능과 검증 범위를 더 충분히 확보할 수 있으며, 예산을 유지할 경우에는 위 배분을 기준으로 우선순위를 확정하겠습니다.</p>
+      </div>
+
+      <!-- 탭 3 -->
+      <div class="tab-p" role="tabpanel" data-t="별도 견적 (미확정 4건) · 권장 조합">
+        <p class="gc-d" style="margin-bottom:15px">공고 요구에 따라 기본 범위와 구분했습니다. 각 항목에는 당사 의견과 1차 범위에서 제외할 경우의 후속 확장 방식을 함께 제시했습니다.</p>
+        <div class="tbl-x">
+          <div class="tbl" style="grid-template-columns:38px minmax(170px,.8fr) 62px 96px minmax(300px,1.9fr)">
+            <div class="hd"><b class="c">#</b><b>항목</b><b class="r">MD</b><b class="r">금액</b><b>당사 의견</b></div>
+            <div><span class="c"><strong>A</strong></span><span>가상계좌 발급·자동 입금 확인</span><span class="r">6.0</span><span class="r">1,500,000</span><span><strong>1차에서는 관리자 수동 확인으로 시작할 수 있습니다.</strong> 입금 확인 기능을 확장 인터페이스로 분리해 추후 PG사의 가상계좌 API를 연결할 수 있게 합니다. 규모 가정에서 무통장 비중이 30%를 넘으면 담당자가 하루 15건 이상의 계좌 내역을 대조해야 하므로, <strong>S1에서 실제 무통장 비중을 확인한 뒤 결정</strong>하시길 권합니다</span></div>
+            <div><span class="c"><strong>B</strong></span><span>카카오 알림톡 발송</span><span class="r">9.0</span><span class="r">2,250,000</span><span><strong>1차에서는 이메일 알림으로 시작할 수 있습니다.</strong> 알림 발송부는 이메일·알림톡·SMS를 같은 인터페이스로 연결하는 채널 어댑터 구조로 설계합니다. 오픈 전 거래처의 실제 알림 채널 수요를 확인해 알림톡 도입 여부를 결정하고, 추후 도입 시에는 발신 프로필 등록과 템플릿 심사 기간을 별도로 반영합니다</span></div>
+            <div class="em"><span class="c"><strong>C</strong></span><span>후불(월 마감) 거래처 — 외상 한도·미수금 관리</span><span class="r">14.0</span><span class="r">3,500,000</span><span><strong>현재 후불 거래처가 있거나 오픈 후 6개월 안에 도입할 계획이면 1차 포함을 권합니다.</strong> 후불은 결제 수단 추가가 아니라 주문 상태 모델의 변경입니다(미결제 출고 → 월 마감 → 일괄 청구 → 수납 대사). 1차에 제외하면 주문 행의 <code>결제구분</code>과 거래처의 <code>여신 한도</code>·<code>여신 사용액</code> 필드만 확장용으로 준비합니다. 도입 시점에는 거래처별 기초 미수 잔액을 엑셀로 등록한 뒤 이후 주문부터 한도 계산을 시작합니다. 도입 이전 주문의 미수 이력은 자동 복원되지 않습니다</span></div>
+            <div><span class="c"><strong>D</strong></span><span>기존 거래처·상품·단가 이관 대행</span><span class="r">8.0</span><span class="r">2,000,000</span><span><strong>양식 확정 후 결정하시길 권합니다.</strong> 당사는 어느 쪽이든 표준 업로드 양식과 검증 리포트를 기본 범위에 포함합니다. <strong>당사 의견은 「직접 업로드」가 기본</strong>입니다 — 다만 ① 원본 파일이 3개 이상으로 분산, ② 같은 거래처의 단가가 여러 버전으로 혼재, ③ 상품 코드 체계 미통일 중 하나라도 해당하면 대행을 권합니다. <strong>착수 2주차에 실제 파일을 받아 판정</strong>해 드리고, <strong>그때 결정하셔도 일정에 영향이 없습니다</strong></span></div>
+            <div class="tot"><span></span><span><strong>4건 합계</strong></span><span class="r"><strong>37.0</strong></span><span class="r"><strong>9,250,000</strong></span><span></span></div>
+          </div>
+        </div>
+
+        <h4 class="sub-n">권장 조합</h4>
+        <div class="tbl-x">
+          <div class="tbl" style="grid-template-columns:minmax(200px,1fr) 78px 116px minmax(250px,1.4fr)">
+            <div class="hd"><b>구성</b><b class="r">MD</b><b class="r">금액</b><b>비고</b></div>
+            <div><span>기본 범위 (1차)</span><span class="r">112.0</span><span class="r">28,000,000</span><span>공고 예산 상한</span></div>
+            <div class="em"><span><strong>기본 + C (후불 거래처)</strong></span><span class="r"><strong>126.0</strong></span><span class="r"><strong>31,500,000</strong></span><span>현재 후불 거래처가 있거나 오픈 후 6개월 안에 도입할 계획일 때 권장</span></div>
+            <div class="em"><span><strong>기본 − 14 MD + C (예산 유지안)</strong></span><span class="r"><strong>112.0</strong></span><span class="r"><strong>28,000,000</strong></span><span><strong>증액이 어려운 경우</strong>, 아래 범위 교환으로 C를 예산 안에 포함합니다</span></div>
+            <div><span>기본 + A·B·C·D 전체</span><span class="r">149.0</span><span class="r">37,250,000</span><span>87일 안에 수행 시 투입 부하가 과도해 별도 기간 협의 필요</span></div>
+          </div>
+        </div>
+
+        <h4 class="sub-n">예산 유지안의 범위 교환 (14 MD 확보)</h4>
+        <p class="gc-d" style="margin-bottom:13px"><strong>공고의 상위 기능군은 유지합니다.</strong> 아래는 세부 기능과 운영 깊이를 한 단계 더 낮추는 항목입니다.</p>
+        <div class="tbl-x">
+          <div class="tbl" style="grid-template-columns:minmax(290px,1.5fr) 62px minmax(220px,1fr)">
+            <div class="hd"><b>추가 조정 항목</b><b class="r">MD</b><b>영향</b></div>
+            <div><span>디자인 시안을 <strong>핵심 18화면만 3해상도 개별 설계</strong>, 나머지 24화면은 공통 컴포넌트 조합으로 (개별 시안 없이)</span><span class="r">3.0</span><span>공고가 요구한 <strong>PC·모바일·태블릿 3종 반응형은 42화면 전부 유지</strong>되며(인수 기준 불변), 비핵심 화면의 해상도별 시안 문서가 없을 뿐입니다</span></div>
+            <div><span>통계 고정 리포트 3종 → <strong>2종</strong> (기간별 매출·거래처별 — <strong>공고가 요구한 두 가지는 유지</strong>)</span><span class="r">1.5</span><span>상품별 매출은 주문 엑셀 내려받기로 대체</span></div>
+            <div><span>배너 관리를 <strong>이미지·링크·노출 여부</strong>만 (기간 예약·순서 판정 제외, 운영자가 수동 교체)</span><span class="r">1.5</span><span>배너 기능은 유지, 예약 게시가 없어 교체를 사람이 눌러야 함</span></div>
+            <div><span>대량 담기를 엑셀 붙여넣기 → <strong>상품코드·수량 20행 입력 폼</strong>으로</span><span class="r">1.5</span><span>일괄 담기 기능은 유지, 한 번에 20품목까지</span></div>
+            <div><span>마이페이지 4개 탭 → <strong>주문·견적 2개 탭</strong> (결제·배송 정보는 주문 상세에 통합)</span><span class="r">1.5</span><span>조회 경로가 한 단계 깊어짐</span></div>
+            <div><span>관리자 대시보드 → <strong>주문 목록을 첫 화면</strong>으로 (미답변 문의는 메뉴 배지로 표시)</span><span class="r">1.5</span><span>요약 지표를 한눈에 보는 화면이 없음</span></div>
+            <div><span>재고 관리를 <strong>수량 증감</strong>으로 한정 (입출고 이력 조회 화면 없이 현재 수량만)</span><span class="r">1.5</span><span>재고 증감의 원인 추적은 주문 이력으로만</span></div>
+            <div><span>재주문을 <strong>전량 동일 재주문</strong>만 (수량 조정은 장바구니에서)</span><span class="r">1.0</span><span>재주문 기능은 유지, 수량만 바꿀 때 한 단계 더</span></div>
+            <div><span>상품 검색 필터를 <strong>카테고리·상품명·상품코드 3종</strong>으로 한정 (가격대 필터 제외)</span><span class="r">1.0</span><span>가격대로 좁히는 검색 없음</span></div>
+            <div class="tot"><span><strong>계</strong></span><span class="r"><strong>14.0</strong></span><span></span></div>
+          </div>
+        </div>
+        <p class="cap"><strong>위 범위 교환표는 「예산 유지안」(112.0 MD · 28,000,000원 · 참여율 합계 128.7% 유지)에만 해당합니다.</strong> 증액안인 「기본 + C」(31,500,000원)를 선택하시면 총 투입량이 112.0 MD에서 126.0 MD로 늘어나며, 달력 87일 기준 참여율 합계는 <strong>128.7%에서 144.8%</strong>로 높아집니다(8명 평균 18.1%). 같은 87일 안에 수행할 수 있으나 기획·백엔드 부하가 증가하므로 계약 시 확정을 요청드립니다.</p>
+      </div>
+    </div>
+
+    <h3 class="sub rv">대금 지급 제안</h3>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:76px minmax(250px,1.4fr) 82px 128px">
+        <div class="hd"><b>회차</b><b>시점</b><b class="r">비율</b><b class="r">금액</b></div>
+        <div><span>1차</span><span>계약 체결 시</span><span class="r">30%</span><span class="r">8,400,000원</span></div>
+        <div><span>2차</span><span>G2(화면 설계·규칙 정의서 승인) 완료 시</span><span class="r">20%</span><span class="r">5,600,000원</span></div>
+        <div><span>3차</span><span>G4(견적·주문·결제 개발 완료) 시</span><span class="r">20%</span><span class="r">5,600,000원</span></div>
+        <div><span>4차</span><span>최종 검수 완료 시</span><span class="r">30%</span><span class="r">8,400,000원</span></div>
+        <div class="tot"><span><strong>계</strong></span><span></span><span class="r"><strong>100%</strong></span><span class="r"><strong>28,000,000원</strong></span></div>
+      </div>
+    </div>
+    <p class="cap rv">금액은 부가세 별도이며, 서버 이용료·도메인·PG 결제 수수료·이메일 발송 비용은 공고 명시대로 발주사 부담입니다.</p>
+  </div>
+</section>
+
+<!-- ====================== 05 개발 일정 ====================== -->
+<section class="sec" id="s5">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">05</span>
+      <h2>87일 · 5단계 · <span class="hl">승인 게이트 5회</span></h2>
+      <p class="sec-lead">2026-10-19 착수 ~ 2027-01-13 종료 · 영업일 61일 · 내부 예비 7일 포함. 발주 기간 90일 대비 3일 여유를 남겼습니다. 착수일은 계약 체결 시점에 맞춰 조정하되, 총 87일과 각 단계의 일수 배분은 유지합니다.</p>
+    </div>
+
+    <div class="gantt rv" data-d="40">
+      <div class="g-scale" style="display:grid;grid-template-columns:210px 1fr;gap:14px;border:0;padding:0;margin-bottom:9px">
+        <span></span>
+        <span style="display:grid;grid-template-columns:repeat(4,22.989%) 1fr">
+          <span>10-19</span><span>11-08</span><span>11-28</span><span>12-18</span><span>2027-01-07</span>
+        </span>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>S1 착수·요구사항 정의</b><i>1~12일차 (1~2주차) · 8.5 MD</i></div>
+        <div class="g-track"><div class="g-bar" style="--s:0%;--w:13.793%;background:var(--ph-red)"><span>10-19 ~ 10-30</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>S2 화면 설계·규칙 정의</b><i>13~25일차 (2~4주차) · 16.0 MD</i></div>
+        <div class="g-track"><div class="g-bar" style="--s:13.793%;--w:14.943%;background:var(--ph-cream)"><span>10-31 ~ 11-12</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>S3 디자인·공통기반·가격 엔진</b><i>26~48일차 (4~7주차) · 34.5 MD</i></div>
+        <div class="g-track"><div class="g-bar" style="--s:28.736%;--w:26.437%;background:var(--ph-aqua)"><span>11-13 ~ 12-05</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>S4 견적·주문·결제·관리자</b><i>49~70일차 (7~10주차) · 38.0 MD</i></div>
+        <div class="g-track"><div class="g-bar" style="--s:55.172%;--w:25.287%;background:var(--ph-sage)"><span>12-06 ~ 12-27</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>S5 통합 QA·인수 시험·이관</b><i>71~80일차 (11~12주차) · 15.0 MD</i></div>
+        <div class="g-track"><div class="g-bar" style="--s:80.460%;--w:11.494%;background:var(--ph-lilac)"><span>12-28 ~ 01-06</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>예비 (검수 보완)</b><i>81~87일차 (12~13주차)</i></div>
+        <div class="g-track"><div class="g-bar" style="--s:91.954%;--w:8.046%;background:repeating-linear-gradient(115deg,var(--key-edge) 0 2px,transparent 2px 7px);border:1px dashed var(--key-edge)"><span></span></div></div>
+      </div>
+      <div class="g-gates">
+        <div class="g-lab" style="font-size:11px;color:var(--faint);align-self:start;padding-top:4px">승인 게이트</div>
+        <div class="g-gline">
+          <div class="gate" style="--s:13.793%"><b>G1</b><i>12일차</i></div>
+          <div class="gate dn" style="--s:28.736%"><b>G2</b><i>25일차 · 핵심</i></div>
+          <div class="gate" style="--s:55.172%"><b>G3</b><i>48일차</i></div>
+          <div class="gate dn" style="--s:80.460%"><b>G4</b><i>70일차</i></div>
+          <div class="gate gate-tail" style="right:8.046%"><b>G5</b><i>80일차</i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tbl-x rv" data-d="60" style="margin-top:22px">
+      <div class="tbl" style="grid-template-columns:minmax(178px,.9fr) 74px minmax(240px,1.6fr) minmax(170px,.9fr) minmax(152px,.8fr)">
+        <div class="hd"><b>단계</b><b class="r">투입 MD</b><b>주요 작업</b><b>산출물</b><b>승인 게이트</b></div>
+        <div><span><strong>S1</strong> 착수·요구사항 정의<br><i style="font-style:normal;color:var(--faint);font-size:12px">10-19 ~ 10-30</i></span><span class="r">8.5</span><span>현업 인터뷰, 기능 목록 확정, 규모 가정 검증, 등급·권한 체계 정의, <strong>PG 가맹 신청 지원(1일차)</strong></span><span>요구사항 정의서</span><span><strong>G1</strong> (12일차) 요구사항 승인</span></div>
+        <div class="em"><span><strong>S2</strong> 화면 설계·규칙 정의<br><i style="font-style:normal;color:var(--faint);font-size:12px">10-31 ~ 11-12</i></span><span class="r">16.0</span><span>42화면 설계, 화면 흐름도, <strong>거래처 가격·MOQ·견적 전환 규칙 정의서</strong>, DB 스키마·ERD, API 규격</span><span>화면 설계서 · <strong>규칙 정의서</strong> · DB 스키마</span><span><strong>G2</strong> (25일차) <strong>핵심 게이트: 설계·규칙 승인</strong></span></div>
+        <div><span><strong>S3</strong> 디자인·공통기반·상품·가격 엔진<br><i style="font-style:normal;color:var(--faint);font-size:12px">11-13 ~ 12-05</i></span><span class="r">34.5</span><span>UI 디자인 42화면, 인프라 구축, 기업회원·가입 승인·등급/권한, 상품·카테고리·재고, <strong>3단 가격 조회 + MOQ 엔진</strong></span><span>디자인 시안·디자인 시스템 · 가격 엔진 시연</span><span><strong>G3</strong> (48일차) 디자인·가격 엔진 승인</span></div>
+        <div><span><strong>S4</strong> 견적·주문·결제·관리자<br><i style="font-style:normal;color:var(--faint);font-size:12px">12-06 ~ 12-27</i></span><span class="r">38.0</span><span>장바구니·대량 주문, 견적서·<strong>주문 전환(스냅샷)</strong>, 결제(PG·무통장)·자동 취소, 취소·반품, 배송·송장, 관리자 운영·통계·엑셀, 이메일 알림</span><span>전체 기능 개발 완료본</span><span><strong>G4</strong> (70일차) 기능 개발 완료</span></div>
+        <div><span><strong>S5</strong> 통합 QA·인수 시험·이관<br><i style="font-style:normal;color:var(--faint);font-size:12px">12-28 ~ 2027-01-06</i></span><span class="r">15.0</span><span>통합·회귀 테스트, 성능·보안 점검, <strong>인수 시험 입회</strong>, 운영 매뉴얼, 배포·이관, 운영자 교육 자료·일정 확정</span><span>인수 시험 결과서 · 운영 매뉴얼 · 배포 절차서</span><span><strong>G5</strong> (80일차) 최종 검수</span></div>
+        <div class="mut"><span><strong>예비</strong><br><i style="font-style:normal;color:var(--faint);font-size:12px">2027-01-07 ~ 01-13</i></span><span class="r">—</span><span>검수 지적 사항 반영, 오픈 대응</span><span></span><span></span></div>
+        <div class="tot"><span><strong>합계 · 87일</strong></span><span class="r"><strong>112.0</strong></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+    <h3 class="sub rv">승인 게이트 운영</h3>
+    <p class="rv" style="max-width:74ch">각 게이트에서는 <strong>승인 요청 후 5영업일 이내 회신</strong>을 전제로 합니다. 표의 다음 단계 시작일에는 승인 결과와 무관하게 진행할 수 있는 환경 구성·공통 컴포넌트·기술 준비를 병행하는 기간이 포함되어 있습니다. 가격 규칙이나 화면 구조처럼 승인에 종속되는 작업은 승인 후 확정하며, 5영업일 안에 회신되면 제시 일정을 유지하고 이를 초과하면 지연 일수만큼 후속 일정을 조정합니다.</p>
+    <div class="qb rv" data-d="40">
+      <span class="lbl">G2가 이 프로젝트에서 가장 중요한 게이트입니다</span>
+      가격 규칙·MOQ·견적 전환 절차는 G2 이후 변경 시 개발된 코드와 이미 만든 화면을 함께 고쳐야 합니다.
+      G2 전까지는 <strong>승인된 총 112.0 MD 안에서</strong> 규칙 변경을 반영하고, G2 이후 변경은 변경 절차를 따릅니다.
+    </div>
+
+    <h3 class="sub rv">외부 절차와 일정의 관계 — PG 심사</h3>
+    <p class="rv" style="max-width:74ch">공고에 명시된 <strong>PG 가맹 계약·심사 2~4주</strong>를 일정에 반영했습니다.</p>
+    <div class="grid g4 rv" data-d="40">
+      <dl class="stat"><dt>신청</dt><dd class="num" style="font-size:clamp(19px,2.3vw,25px)">1일차</dd>
+        <div class="sn">10-19 · 발주사 명의로 신청. 사업자 서류·서비스 정책·개인정보처리방침·이용약관·심사용 화면이 준비된다는 전제로 당사가 기술 항목 작성을 지원</div></dl>
+      <dl class="stat"><dt>4주 완료 가정</dt><dd class="num" style="font-size:clamp(19px,2.3vw,25px)">29일차</dd>
+        <div class="sn">11-16 · 일반적인 최대 예상 기간 4주 적용</div></dl>
+      <dl class="stat"><dt>결제 개발 시작</dt><dd class="num" style="font-size:clamp(19px,2.3vw,25px)">49일차</dd>
+        <div class="sn">12-06 · S4 착수</div></dl>
+      <dl class="stat"><dt>예상 간격</dt><dd><span class="num" data-to="20">20</span><em>일</em></dd>
+        <div class="sn">4주 안에 승인될 경우 결제 개발 시작 전 확보되는 기간</div></dl>
+    </div>
+    <p class="cap rv">심사 중에는 <strong>PG 샌드박스(테스트 키)로 결제 모듈 개발을 병행</strong>합니다. 다만 PG사 추가 보완 요청이나 심사 반려처럼 당사가 통제할 수 없는 사유가 발생하면 실제 결제 검증 일정은 협의해 조정합니다.</p>
+
+    <h3 class="sub rv">산출물</h3>
+    <p class="rv" style="max-width:74ch"><strong>공고의 결과물 5종을 모두 포함</strong>하며, 전달 시점을 단계 게이트에 묶었습니다.</p>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(230px,1.3fr) minmax(190px,1fr) minmax(158px,.8fr)">
+        <div class="hd"><b>산출물</b><b>형식</b><b>전달 시점</b></div>
+        <div><span>요구사항 정의서</span><span>문서 (Markdown + PDF)</span><span>G1 (12일차)</span></div>
+        <div><span>화면 설계서 (42화면 · 화면 흐름도 포함)</span><span>문서 + 와이어프레임</span><span>G2 (25일차)</span></div>
+        <div class="em"><span><strong>거래처별 가격·견적 전환 규칙 정의서</strong></span><span>문서 (판정표 + 예외 케이스 목록)</span><span>G2 (25일차)</span></div>
+        <div><span>DB 스키마 (ERD + DDL)</span><span>문서 + SQL 파일</span><span>G2 (25일차), 최종본 G5</span></div>
+        <div><span>UI 디자인 시안 + 디자인 시스템</span><span>Figma (Dev Mode 핸드오프)</span><span>G3 (48일차)</span></div>
+        <div><span>전체 소스코드</span><span><strong>발주사 소유 저장소</strong>에 직접 커밋</span><span>착수 시점부터 상시, 최종본 G5</span></div>
+        <div><span>API 명세서</span><span>OpenAPI (Swagger UI 제공)</span><span>G3, 최종본 G5</span></div>
+        <div><span>인수 시험 시나리오 · 결과서</span><span>문서 (항목별 합/불)</span><span>G5 (80일차)</span></div>
+        <div><span>운영 매뉴얼 (관리자용)</span><span>문서 + 화면 캡처</span><span>G5 (80일차)</span></div>
+        <div><span>빌드·배포 절차서, 환경 변수 목록</span><span>문서</span><span>G5 (80일차)</span></div>
+      </div>
+    </div>
+    <p class="cap rv">소스코드는 개발 착수 시점부터 <strong>귀사 명의 저장소에 직접 커밋</strong>합니다. 완료 후 일괄 전달하지 않으므로, 진행 중 언제든 코드를 직접 확인하실 수 있습니다. 권리 귀속 조건은 「09 품질·유지보수」 마지막에 있습니다.</p>
+  </div>
+</section>
+
+<!-- ====================== 06 참여 인원 ====================== -->
+<section class="sec alt" id="s6">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">06</span>
+      <h2>8명 · 참여율 합계 <span class="hl">128.7%</span> · 112.0 MD</h2>
+      <p class="sec-lead">실제 배정 가능한 인원만 기재했습니다. <strong>참여율 = 투입 MD ÷ 달력 기간 87일</strong>, 투입 MM = 투입 MD ÷ 30으로 계산했습니다.</p>
+    </div>
+
+    <div class="tm rv" data-d="40">
+      <div class="tm-r hd"><span>역할 / 등급 · 경력</span><span>참여율</span><span>배정 업무</span><span class="tm-n" style="font-weight:700">투입 MD</span></div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">PM<i>대표이사</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">9.2%</span><span class="rb" style="--w:9.2%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">전 과업 총괄·의사결정, 대금·계약 협의</div>
+        <div class="tm-n" data-l="투입">8.0<i>0.27 MM</i></div>
+      </div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">기획<i>책임 / 10년</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">32.2%</span><span class="rb" style="--w:32.2%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">요구사항·화면 설계·가격·MOQ 규칙 정의·인수 시나리오</div>
+        <div class="tm-n" data-l="투입">28.0<i>0.93 MM</i></div>
+      </div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">디자인<i>차석 / 15년</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">10.9%</span><span class="rb" style="--w:10.9%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">디자인 시스템·핵심 사용자 화면</div>
+        <div class="tm-n" data-l="투입">9.5<i>0.32 MM</i></div>
+      </div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">디자인<i>책임 / 10년</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">9.2%</span><span class="rb" style="--w:9.2%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">반응형 화면·관리자 공통 컴포넌트</div>
+        <div class="tm-n" data-l="투입">8.0<i>0.27 MM</i></div>
+      </div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">프론트엔드<i>책임 / 7년</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">18.4%</span><span class="rb" style="--w:18.4%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">사용자몰·반응형 화면 구현</div>
+        <div class="tm-n" data-l="투입">16.0<i>0.53 MM</i></div>
+      </div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">프론트엔드<i>책임 / 7년</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">14.9%</span><span class="rb" style="--w:14.9%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">관리자몰·공통 컴포넌트 구현</div>
+        <div class="tm-n" data-l="투입">13.0<i>0.43 MM</i></div>
+      </div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">백엔드<i>수석 / 20년</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">20.1%</span><span class="rb" style="--w:20.1%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">아키텍처·결제·가격 정합성·배포</div>
+        <div class="tm-n" data-l="투입">17.5<i>0.58 MM</i></div>
+      </div>
+      <div class="tm-r">
+        <div class="tm-role" data-l="역할">백엔드<i>차석 / 15년</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--tx)">13.8%</span><span class="rb" style="--w:13.8%"><i></i></span></div>
+        <div class="tm-job" data-l="배정 업무">상품·주문·이력·데이터 동기화</div>
+        <div class="tm-n" data-l="투입">12.0<i>0.40 MM</i></div>
+      </div>
+      <div class="tm-r tot">
+        <div class="tm-role" data-l="역할">합계<i>8명</i></div>
+        <div class="tm-rate" data-l="참여율"><span class="num" style="font-size:14.5px;font-weight:700;color:var(--key-strong)">128.7%</span></div>
+        <div class="tm-job"></div>
+        <div class="tm-n" data-l="투입" style="color:var(--key-strong)">112.0<i>3.73 MM</i></div>
+      </div>
+    </div>
+    <p class="cap rv">회사 차원의 유사 프로젝트 경험은 「03 유사 실적」에 구분해 기재했습니다. 위 표는 제공된 인력 자료로 확인되는 역할·등급·경력과 이번 과업의 배정 업무를 표시한 것이며, 확인되지 않은 개인별 프로젝트 참여 이력을 임의로 연결하지 않았습니다.</p>
+
+    <div class="qb rv" data-d="40">
+      <span class="lbl">일정의 핵심 경로는 기획입니다</span>
+      기획 1명이 <strong>32.2%</strong>로 가장 높은 참여율을 가지며, 요구사항 정의(S1)와 화면 설계(S2)는 여러 인력으로 단순 병렬화하기 어렵습니다.
+      두 단계가 지연되면 후속 일정에도 영향을 주므로 <strong>현업 확인 회신을 5영업일 이내</strong>로 전제했습니다.
+    </div>
+
+    <h3 class="sub rv">겸임 구조 — 별도 인력을 세우지 않는 이유</h3>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(178px,.72fr) minmax(196px,.88fr) minmax(280px,1.6fr)">
+        <div class="hd"><b>역할</b><b>담당</b><b>근거</b></div>
+        <div><span>QA·테스터</span><span>기획(책임 10년) 겸임</span><span>예산상 기획자가 테스트 시나리오 작성을 겸임하되, 자기 검증의 한계를 줄이기 위해 PM과 백엔드 수석이 요구사항·시나리오·결과를 교차 검토합니다</span></div>
+        <div><span>DevOps·DBA</span><span>백엔드(수석 20년) 겸임</span><span>예상 규모에서는 별도 전담 인력보다 스키마·인덱스 설계자가 배포까지 담당하는 편이 성능 문제의 원인 추적과 대응에 효율적입니다</span></div>
+        <div><span>퍼블리셔</span><span>프론트엔드 2명 겸임</span><span>반응형 3종 대응을 마크업과 컴포넌트 구현으로 분리하지 않습니다</span></div>
+        <div><span>기술 문서 (운영 매뉴얼·이관 문서)</span><span>각 담당자가 자기 산출물을 쓰고 <strong>기획(책임)이 취합·편집</strong></span><span>별도 인력을 세우지 않고, QA 항목 11.0 MD 중 <strong>3.0 MD를 매뉴얼·이관 문서</strong>에 배정합니다</span></div>
+      </div>
+    </div>
+    <p class="cap rv"><strong>근무 형태</strong> — 전원 <strong>원격 수행</strong>을 기본으로 합니다. 게이트 시연(G1~G5)과 인수 시험(79~80일차)은 귀사(경기도 부천시) 방문으로 진행하며, 상주가 필요하시면 PM·기획의 주 1일 상주로 협의 가능합니다. 방문 비용은 견적에 포함되어 있어 추가 청구가 없습니다.</p>
+
+    <h3 class="sub rv">단계별 투입 (MD)</h3>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(132px,1fr) repeat(5,minmax(62px,.62fr)) 74px">
+        <div class="hd"><b>역할</b><b class="r">S1</b><b class="r">S2</b><b class="r">S3</b><b class="r">S4</b><b class="r">S5</b><b class="r">합계</b></div>
+        <div><span>PM</span><span class="r">1.5</span><span class="r">1.5</span><span class="r">1.5</span><span class="r">2.0</span><span class="r">1.5</span><span class="r"><strong>8.0</strong></span></div>
+        <div><span>기획</span><span class="r">5.0</span><span class="r">7.0</span><span class="r">5.0</span><span class="r">5.0</span><span class="r">6.0</span><span class="r"><strong>28.0</strong></span></div>
+        <div><span>디자인 (차석)</span><span class="r">0.5</span><span class="r">2.0</span><span class="r">5.0</span><span class="r">2.0</span><span class="r">0.0</span><span class="r"><strong>9.5</strong></span></div>
+        <div><span>디자인 (책임)</span><span class="r">0.0</span><span class="r">1.0</span><span class="r">5.0</span><span class="r">2.0</span><span class="r">0.0</span><span class="r"><strong>8.0</strong></span></div>
+        <div><span>프론트엔드 A</span><span class="r">0.0</span><span class="r">1.0</span><span class="r">5.0</span><span class="r">8.0</span><span class="r">2.0</span><span class="r"><strong>16.0</strong></span></div>
+        <div><span>프론트엔드 B</span><span class="r">0.0</span><span class="r">0.5</span><span class="r">4.0</span><span class="r">7.0</span><span class="r">1.5</span><span class="r"><strong>13.0</strong></span></div>
+        <div><span>백엔드 (수석)</span><span class="r">1.5</span><span class="r">2.0</span><span class="r">5.0</span><span class="r">6.5</span><span class="r">2.5</span><span class="r"><strong>17.5</strong></span></div>
+        <div><span>백엔드 (차석)</span><span class="r">0.0</span><span class="r">1.0</span><span class="r">4.0</span><span class="r">5.5</span><span class="r">1.5</span><span class="r"><strong>12.0</strong></span></div>
+        <div class="tot"><span><strong>합계</strong></span><span class="r"><strong>8.5</strong></span><span class="r"><strong>16.0</strong></span><span class="r"><strong>34.5</strong></span><span class="r"><strong>38.0</strong></span><span class="r"><strong>15.0</strong></span><span class="r"><strong>112.0</strong></span></div>
+      </div>
+    </div>
+
+    <h3 class="sub rv">회사 개요</h3>
+    <p class="rv" style="max-width:74ch">당사는 2016년 9월 설립된 법인사업자로, 글로벌 게임 플랫폼의 <strong>결제·계정·운영 콘솔</strong>을 직접 만들어 100개 이상 고객사에 서비스로 제공해 온 회사입니다. 이번 과업이 요구하는 세 가지 — 거래 금액의 정합성, 요청·승인 워크플로, 사용자 화면과 운영 백오피스의 이중 구조 — 는 모두 당사가 자사 플랫폼에서 상용으로 운영 중인 영역입니다.</p>
+    <div class="grid g4 rv" data-d="40">
+      <dl class="stat"><dt>사업자 형태</dt><dd class="num" style="font-size:clamp(17px,2vw,21px);font-family:var(--font)">법인사업자</dd></dl>
+      <dl class="stat"><dt>설립</dt><dd class="num" style="font-size:clamp(17px,2vw,21px)">2016.09<em>업력 10년</em></dd></dl>
+      <dl class="stat"><dt>임직원</dt><dd><span class="num" data-to="205">205</span><em>명</em></dd><div class="sn">2026-08-12 기준</div></dl>
+      <dl class="stat"><dt>고객사</dt><dd><span class="num" data-to="100">100</span><em>개사 이상</em></dd></dl>
+    </div>
+    <p class="cap rv">위 숫자는 제안서 전체에서 단일 출처로 사용합니다. 제안 투입 인력은 회사 전체 인원과 별개로 실제 배정 가능한 인원만 기재했습니다. 이 과업과 연결되는 사업 영역은 결제·빌링 플랫폼 / 운영 백오피스·권한 체계 / 반응형 웹·SaaS 콘솔 / 클라우드 인프라 구축·운영입니다.</p>
+  </div>
+</section>
+
+<!-- ====================== 07 기술 제안 ====================== -->
+<section class="sec" id="s7">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">07</span>
+      <h2>각 기술을 <span class="hl">어떤 요구 때문에</span> 선정했는지</h2>
+      <p class="sec-lead">공고 「필수 사항 1번 — 적합한 기술 스택과 그 선택 이유」에 대한 답변입니다. 향후 기능 확장과 유지보수가 쉬운 구조를 기준으로 선정했습니다.</p>
+    </div>
+
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:96px minmax(200px,.95fr) minmax(330px,2.1fr)">
+        <div class="hd"><b>구분</b><b>선택</b><b>이 과업에서의 선택 이유</b></div>
+        <div class="em"><span>백엔드</span><span><strong>Spring Boot (Java 21)</strong></span><span>가격 확정·금액 계산은 <strong>트랜잭션 경계</strong>가 잘못되면 금액 정합성 문제가 발생할 수 있습니다. 선언적 트랜잭션과 검증 계층이 표준화되어 있어 규칙을 일관되게 관리하기 좋습니다. <strong>빌링 시스템에 사용된 핵심 기술과 일치</strong>하며, 회사 차원의 결제·금액 로직 운영 경험을 이번 설계에 적용합니다</span></div>
+        <div><span>DB</span><span><strong>MySQL 8.4 LTS</strong></span><span>2026년 신규 구축에 적합한 장기지원 버전입니다. 5년 누적 218만 행 규모에서는 분산 처리보다 <strong>복합 인덱스와 일관된 트랜잭션</strong>이 중요하며, 범용 기술이라 다른 업체의 인수·운영도 용이합니다</span></div>
+        <div class="em"><span>프론트</span><span><strong>Next.js + React + TypeScript</strong></span><span>착수 시점의 안정화된 지원 버전을 확정합니다. 상품·주문 목록은 <strong>검색엔진 노출이 필요 없는 로그인 후 화면</strong>이 대부분이지만, 공개 상품 소개 영역은 SSR이 유리합니다. 한 프레임워크에서 두 방식을 함께 사용할 수 있고, TypeScript로 금액·수량 타입 오류를 줄입니다. <strong>NFT 플랫폼에서 Next.js·React·MySQL을 활용한 상용 운영 경험</strong>이 있습니다</span></div>
+        <div><span>반응형</span><span><strong>Tailwind CSS + 자체 컴포넌트</strong></span><span>공고의 “프로모션 중심이 아닌 업무형 화면” 요구에 맞춰, 무거운 UI 프레임워크 대신 <strong>표·목록·폼 중심 컴포넌트</strong>를 직접 만들어 디자인 시스템으로 문서화합니다. PC·태블릿·모바일 3종, Chrome·Safari·Edge 대응</span></div>
+        <div class="em"><span>결제</span><span><strong>포트원(PortOne) 기반 PG 연동 + 무통장 수기 확인</strong></span><span><strong>직접 연동 경험을 보유한</strong> 게이트웨이입니다. 카드 결제 취소 API가 표준화되어 있어 <strong>결제 취소와 환불</strong> 처리를 어댑터 한 곳에서 다룹니다(이번 범위는 <strong>전량 취소·전량 환불</strong>이며, 부분 반품·부분 환불은 제외). 가맹 계약은 공고대로 <strong>발주사 명의</strong>로 진행</span></div>
+        <div><span>알림</span><span><strong>AWS SES (이메일) + 채널 어댑터</strong></span><span>1차는 이메일만 제공하지만, 발송 호출부를 어댑터로 분리해 알림톡을 추후 연동할 때 <strong>기존 업무 로직의 변경 범위를 최소화</strong>합니다</span></div>
+        <div><span>인프라</span><span><strong>AWS (EC2 + RDS + S3 + CloudFront) · Docker · GitHub Actions</strong></span><span><strong>발주사 명의 계정</strong>에 구축합니다. RDS 자동 백업과 복원 점검 절차를 구성하고, 컨테이너 배포로 다른 업체가 인수해도 동일 환경을 재현할 수 있게 합니다. 1차는 단일 리전·단일 애플리케이션 인스턴스이므로 장애 시 복구 시간이 발생할 수 있으며, 목표 복구 수준은 S1에서 확정합니다</span></div>
+        <div class="em"><span>인증·보안</span><span><strong>Spring Security + JWT · bcrypt · HTTPS 전 구간</strong></span><span>거래처 계정이 <strong>타사 가격을 볼 수 없어야</strong> 하므로, 화면 숨김이 아니라 <strong>서버 측 권한 필터</strong>에서 거래처 ID를 강제 주입해 차단합니다. RDS·S3 저장 데이터 암호화, 관리자 중요 작업과 개인정보·첨부파일 접근 감사 로그를 적용합니다</span></div>
+        <div><span>문서</span><span><strong>OpenAPI(Swagger) · ERD 자동 생성</strong></span><span>2차 고도화(ERP·물류 연동) 시 외부 수행사도 연동할 수 있도록 API 규격을 기계 판독 가능한 형태로 제공합니다</span></div>
+      </div>
+    </div>
+
+    <h3 class="sub rv">설계에서 2차 확장을 미리 고려한 부분</h3>
+    <p class="rv" style="max-width:74ch">공고에서 「다음 단계로 미룬 범위」로 구분한 네 항목은 향후 기능을 확장할 수 있도록 1차 구축 단계부터 데이터 구조와 연동 지점을 설계합니다.</p>
+    <div class="grid g2 rv" data-d="40">
+      <div>
+        <div class="gc-k">2차 확장 ①</div>
+        <div class="gc-t">ERP·물류·회계 연동</div>
+        <p class="gc-d">주문·상품·거래처에 <strong>외부 시스템 코드 필드</strong>를 미리 두고, 상태 변경 지점마다 이벤트 훅을 남깁니다</p>
+      </div>
+      <div>
+        <div class="gc-k">2차 확장 ②</div>
+        <div class="gc-t">전자세금계산서 발행</div>
+        <p class="gc-d">거래처 세금계산서 정보와 <strong>주문 행의 공급가·부가세를 분리 저장</strong>해, 발행 대행사 연동 시 계산을 다시 하지 않도록 합니다</p>
+      </div>
+      <div>
+        <div class="gc-k">2차 확장 ③</div>
+        <div class="gc-t">사업자등록번호 진위 확인</div>
+        <p class="gc-d">가입 폼의 사업자번호에 <strong>검증 상태 필드</strong>(미검증/검증됨/검증 실패)를 두어, 국세청 API를 연동할 때 스키마 변경이 없도록 합니다</p>
+      </div>
+      <div>
+        <div class="gc-k">2차 확장 ④</div>
+        <div class="gc-t">택배사 배송 조회 연동</div>
+        <p class="gc-d">송장번호와 <strong>택배사 코드</strong>를 함께 저장합니다(1차에서는 조회 링크 제공).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 08 개발 범위 ====================== -->
+<section class="sec alt" id="s8">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">08</span>
+      <h2>공고 기능 요구 → <span class="hl">구현 방식</span></h2>
+      <p class="sec-lead">공고 2-1 ~ 2-5의 상위 기능 항목별로 구현 방식과 1차 범위의 깊이를 정리했습니다. 각 탭이 공고의 한 항목에 대응합니다.</p>
+    </div>
+
+    <div class="tabs rv" data-d="40">
+      <div class="tab-b" role="tablist" aria-label="개발 범위">
+        <button type="button" role="tab" aria-selected="true">2-1 기업 회원·거래처</button>
+        <button type="button" role="tab" aria-selected="false">2-2 상품·거래처별 가격</button>
+        <button type="button" role="tab" aria-selected="false">2-3 견적·주문·결제</button>
+        <button type="button" role="tab" aria-selected="false">2-4 주문 이후</button>
+        <button type="button" role="tab" aria-selected="false">2-5 관리자 운영</button>
+      </div>
+
+      <div class="tab-p on" role="tabpanel" data-t="2-1. 기업 회원·거래처 관리">
+        <div class="tbl-x"><div class="tbl" style="grid-template-columns:minmax(170px,.8fr) minmax(340px,2fr)">
+          <div class="hd"><b>요구</b><b>구현 방식</b></div>
+          <div><span>기업 회원가입 + 사업자등록증 첨부</span><span>사업자번호·상호·대표자·업태/종목·담당자 정보를 하나의 입력 화면에서 받고, 사업자등록증은 <strong>Amazon S3 비공개 버킷에 저장하고 권한 있는 관리자만 유효기간이 짧은 서명 URL로 열람</strong>합니다. 허용 확장자·MIME 유형·용량을 검증하고 악성 파일 검사를 거친 뒤, 원본명과 별개의 내부 키로 저장합니다. <strong>보관 기간·삭제 기준과 다운로드 감사 로그는 개인정보 처리방침 및 S1 확정 정책에 따릅니다</strong></span></div>
+          <div><span>가입 승인 / 반려</span><span>가입 계정을 <strong>대기 → 승인 또는 반려</strong> 상태로 관리합니다. 대기 상태에서는 본인 계정으로 접속해 심사 상태만 확인할 수 있으며, 상품·가격 API 접근은 서버에서 차단합니다. 반려 시에는 사유를 입력받아 안내 메일로 전달합니다</span></div>
+          <div><span>거래처 등급 지정</span><span>거래처마다 등급을 하나 부여하고, <strong>등급이 「가격 정책」과 「메뉴 권한」 두 축을 각각 가리키도록</strong> 분리합니다. 등급을 늘려도 코드를 고치지 않습니다</span></div>
+          <div class="em"><span>등급별 이용 권한</span><span>권한을 <strong>메뉴 단위가 아닌 기능 단위 코드</strong>(견적 요청, 주문 생성, 후불 결제 등)로 정의하고 등급에 매핑합니다. 프론트엔드는 이 코드 목록에 따라 메뉴를 구성하고, 서버는 같은 코드로 API 접근을 제어합니다. <strong>하나의 권한 설정으로 화면과 API에 동일한 정책이 적용됩니다</strong></span></div>
+          <div><span>로그인·비밀번호 재설정</span><span>비밀번호는 bcrypt로 저장하고, 재설정은 메일로 보낸 <strong>1회용 토큰(30분 만료)</strong>으로 처리합니다</span></div>
+          <div><span>회사·담당자 정보 수정</span><span>담당자 정보(이름·연락처·이메일)는 거래처가 직접 수정합니다. 반면 <strong>사업자번호·상호·대표자 등 계약 식별 정보의 변경은 「승인 대기」 상태로 전환</strong>해 관리자 재승인을 받게 합니다. 세금계산서 정보의 근거가 되는 값이 승인 없이 변경되지 않도록 변경 전후 값을 이력에 남깁니다</span></div>
+        </div></div>
+      </div>
+
+      <div class="tab-p" role="tabpanel" data-t="2-2. 상품·거래처별 가격 (이 과업의 핵심)">
+        <p class="gc-d" style="margin-bottom:15px">가격 정합성을 위한 여섯 가지 핵심 설계는 「02 핵심 설계」에서 자세히 설명합니다. 여기서는 나머지 상품 항목을 정리합니다.</p>
+        <div class="tbl-x"><div class="tbl" style="grid-template-columns:minmax(170px,.8fr) minmax(340px,2fr)">
+          <div class="hd"><b>요구</b><b>구현 방식</b></div>
+          <div class="em"><span><strong>거래처별 공급가·할인율 / 가격 격리 / 주문 시점 가격 확정 / 장바구니 단가 변동 / MOQ</strong></span><span>→ <strong>「02 핵심 설계」의 설계 ①~⑤</strong>. 3단 가격 조회, 서버 측 거래처 ID 강제 적용, 주문 행 스냅샷 + 단가 변경 이력, 장바구니 담은 시점 단가 대조, MOQ 3지점 검증</span></div>
+          <div><span>거래처별 판매 가능 상품 설정</span><span>기본은 전체 공개, <strong>예외만 등록</strong>하는 방식(허용 목록 / 차단 목록 중 거래처마다 선택)으로 운영 부담을 줄입니다</span></div>
+          <div><span>상품 탐색<br>(홈·카테고리·전체·신상품/추천·상세·검색/필터)</span><span>카테고리는 2단(대/중) 트리, 검색은 상품명·코드·카테고리 복합 인덱스. <strong>신상품·추천은 별도 화면이 아닌 홈의 섹션과 목록 필터</strong>로 구현합니다. 신상품은 <strong>등록일 기준 자동 선정</strong>(기준 일수는 관리자 설정값), 추천 상품은 관리자가 <strong>상품 목록에서 「추천」 플래그와 노출 순서를 지정</strong>하는 방식이라 별도 관리 화면이 필요 없습니다</span></div>
+          <div><span>상품·카테고리·재고 관리</span><span>재고는 <strong>주문 확정 시 차감하고, 주문 취소 시 복원하며, 반품은 반품 상품의 입고·검수 완료 후 복원</strong>합니다. 입금 기한 초과로 자동 취소되는 주문도 재고를 복원합니다. 각 경로를 잠금 트랜잭션으로 처리해 동시 주문에서도 음수 재고가 발생하지 않도록 합니다</span></div>
+        </div></div>
+      </div>
+
+      <div class="tab-p" role="tabpanel" data-t="2-3. 견적·주문·결제">
+        <div class="tbl-x"><div class="tbl" style="grid-template-columns:minmax(170px,.8fr) minmax(340px,2fr)">
+          <div class="hd"><b>요구</b><b>구현 방식</b></div>
+          <div><span>장바구니·대량 주문</span><span>장바구니를 <strong>서버에 저장</strong>해 담당자가 PC에서 담고 모바일에서 이어 주문할 수 있게 합니다. 여러 품목 일괄 담기는 <strong>상품코드·수량 엑셀 붙여넣기</strong>로도 지원합니다</span></div>
+          <div class="em"><span>주문서 작성 · 배송지</span><span>거래처마다 <strong>배송지 주소록(기본 배송지 1건 + 추가 N건)</strong>을 두고, 주문서에서 선택하거나 새로 입력합니다. 선택한 배송지는 <strong>주문 행에 스냅샷으로 복제 저장</strong>해, 이후 주소록을 수정해도 과거 주문의 배송지는 변하지 않습니다(금액 스냅샷과 같은 원칙). B2B에서 흔한 <strong>본사 청구 / 지점 납품 분리</strong>는 세금계산서 정보(거래처 단위)와 배송지(주문 단위)를 처음부터 분리 저장해 지원합니다</span></div>
+          <div><span>견적 요청 / 견적서 확인</span><span>거래처가 장바구니 또는 품목 직접 입력으로 견적을 요청하면 <strong>요청 → 검토 중 → 발송 완료 또는 거절</strong> 상태로 관리합니다. 관리자가 견적서를 작성할 때 <strong>3단 가격 조회 결과가 기본값으로 채워지고</strong>, 건별 조정 시 조정 사유를 함께 기록합니다</span></div>
+          <div class="em"><span>견적 → 주문 전환</span><span>전환 시 견적 행을 <strong>주문 행으로 복제하고 원본 견적 번호를 남깁니다.</strong> 전환 과정에서 가격을 다시 산정하지 않으므로 견적 확정 시점의 금액과 수량이 주문에 그대로 유지됩니다. 전환 현황은 관리자 화면에서 <strong>견적 건수 대비 전환 건수·전환율</strong>로 집계합니다</span></div>
+          <div><span>결제 — PG</span><span>포트원 연동. 승인 응답의 <strong>거래 고유번호를 주문에 저장</strong>해 동일 결제의 중복 승인을 차단합니다(당사 빌링 시스템의 Transaction ID 방식).</span></div>
+          <div><span>결제 — 무통장 입금</span><span>주문 시 <strong>입금자명·입금 기한</strong>을 확정해 안내하고, 관리자가 입금 확인 처리하면 주문이 다음 상태로 넘어갑니다. 가상계좌 자동 확인은 별도 견적 A로 분리하되, <strong>입금 확인 지점을 어댑터로 분리해</strong> 추후 API를 연결할 수 있게 합니다</span></div>
+          <div><span>입금 기한 초과 자동 취소</span><span>스케줄러가 기한 경과 주문의 <strong>취소·재고 복원·알림 발송 이벤트 저장을 하나의 DB 트랜잭션으로 처리</strong>합니다. 이메일은 저장된 이벤트를 재시도 큐에서 별도로 발송해 외부 메일 서비스 장애가 주문·재고 처리에 영향을 주지 않게 합니다. 취소 사유에는 「입금 기한 초과」를 남겨 수동 취소와 구분합니다</span></div>
+          <div><span>취소·반품 요청</span><span>거래처가 요청하면 <strong>요청 → 승인 → 처리 완료</strong> 또는 <strong>요청 → 거절</strong>로 분기해 관리합니다(쿠폰 시스템의 승인 구조와 동일). 취소는 승인 후 카드 결제의 경우 PG 취소 API를 호출하고, 무통장 입금은 환불 계좌를 확인한 뒤 관리자가 처리 이력을 기록합니다. 반품은 승인 후 상품 회수·검수를 거쳐 처리 완료 상태로 전환하며, 재고는 검수 완료 시 복원합니다</span></div>
+        </div></div>
+      </div>
+
+      <div class="tab-p" role="tabpanel" data-t="2-4. 주문 이후">
+        <div class="tbl-x"><div class="tbl" style="grid-template-columns:minmax(170px,.8fr) minmax(340px,2fr)">
+          <div class="hd"><b>요구</b><b>구현 방식</b></div>
+          <div><span>주문 내역·배송 현황 조회</span><span>주문 상태를 <strong>결제대기 → 결제완료 → 준비중 → 출고 → 배송중 → 배송완료</strong>로 두고, 상태 변경마다 변경자·시각을 이력에 남깁니다</span></div>
+          <div><span>관리자 송장 등록 / 택배사 조회 안내</span><span>송장번호에 <strong>택배사 코드를 함께 저장</strong>하고, 거래처 화면에서 해당 택배사 조회 페이지로 링크합니다. 송장은 <strong>주문 관리 목록에서 엑셀 일괄 업로드</strong>로도 등록할 수 있습니다</span></div>
+          <div><span>재주문</span><span>지난 주문의 품목·수량을 장바구니로 복사합니다. <strong>가격은 복사하지 않고 현재 시점 가격을 다시 산정</strong>하며, 단가가 달라진 품목에는 「지난 주문 대비 변동」 표시를 적용해 담당자가 변경 사실을 확인하도록 합니다</span></div>
+          <div><span>마이페이지 (견적·주문·결제·배송)</span><span>하나의 마이페이지에서 탭으로 분기하고, 각 탭은 기간·상태 필터와 <strong>엑셀 내려받기</strong>를 공통으로 갖습니다. 네 탭이 <strong>같은 조회 컴포넌트에 필터 조건만 달리 주입</strong>하는 구조라, 항목이 늘어도 화면을 새로 만들지 않습니다. 회사·담당자·세금계산서 정보 수정도 같은 마이페이지 안에 둡니다</span></div>
+          <div class="em"><span>주요 상태 변경 시 이메일 알림</span><span><strong>9개 시점</strong> — ① 가입 승인 ② 가입 반려 ③ 견적서 발송 ④ 주문 접수 ⑤ 입금 확인 ⑥ 출고(송장 등록) ⑦ 취소·반품 처리 완료 ⑧ <strong>입금 기한 초과 자동 취소</strong> ⑨ <strong>문의 답변 등록</strong> — 에 발송합니다. 발송은 실패 시 재시도 큐를 두고, <strong>발송 이력을 관리자 화면에서 조회</strong>할 수 있게 합니다</span></div>
+          <div><span>세금계산서 정보 관리</span><span>거래처별 발행 정보(사업자번호·상호·대표자·주소·업태/종목·담당자 이메일)를 등록·조회합니다. <strong>주문 행의 공급가와 부가세를 분리 저장</strong>해, 2차에서 발행 대행사를 붙일 때 금액을 다시 계산하지 않도록 합니다</span></div>
+          <div><span>공지사항·FAQ·상품 및 주문 문의</span><span>공지와 FAQ는 관리자가 작성합니다. 문의는 상품 상세의 「상품 문의」와 주문 내역의 「주문 문의」 두 경로로 제공하며, <strong>해당 상품 코드 또는 주문 번호가 문의에 자동으로 연결</strong>됩니다</span></div>
+        </div></div>
+      </div>
+
+      <div class="tab-p" role="tabpanel" data-t="2-5. 관리자 운영">
+        <div class="tbl-x"><div class="tbl" style="grid-template-columns:minmax(170px,.8fr) minmax(340px,2fr)">
+          <div class="hd"><b>요구</b><b>구현 방식</b></div>
+          <div><span>전체 주문 관리·상태 변경</span><span>목록에서 <strong>여러 건 선택 후 일괄 상태 변경</strong>을 지원하고, 상태 전이 규칙(결제대기 → 배송완료 같은 건너뛰기 금지)을 서버에서 강제합니다</span></div>
+          <div><span>배송·송장 관리</span><span>출고 대상 목록 엑셀 내려받기 → 송장번호 채워서 업로드 → 일괄 등록의 왕복 구조</span></div>
+          <div><span>공지·FAQ·문의 관리</span><span>문의를 <strong>접수 → 답변완료</strong> 상태로 관리하고, 미답변 건수를 관리자 홈에 배지로 띄웁니다. 답변 시 문의자에게 이메일이 자동 발송되고, <strong>답변 내용을 수정하면 이력이 남아</strong> 나중에 무엇이라 답했는지 확인할 수 있습니다</span></div>
+          <div><span>배너·프로모션 관리</span><span>배너마다 <strong>노출 시작·종료 일시와 순서값</strong>을 두고, 기간이 겹칠 때는 <strong>순서값이 가장 낮은 1건만 노출</strong>하는 규칙을 서버에서 판정합니다. 업무형 사이트이므로 <strong>배너는 홈 상단 1개 영역</strong>으로 한정합니다. <strong>「프로모션」의 이번 범위</strong>는 배너·공지를 통한 <strong>안내형 프로모션</strong>이며, 가격을 변경하는 프로모션(기간 한정 특가·수량 구간 할인)은 제외입니다</span></div>
+          <div class="em"><span>통계 — 기간별 매출·주문 현황</span><span>주문 행의 <strong>스냅샷 금액을 집계</strong>합니다(마스터 단가가 아님). 따라서 과거 기간 통계는 언제 다시 조회해도 같은 값이 나옵니다</span></div>
+          <div><span>통계 — 거래처별 구매 내역·매출</span><span>주문 스냅샷 행을 <strong>거래처·기간·상품 축의 집계 쿼리</strong>로 처리합니다. 별도 집계 테이블 대신 주문 스냅샷을 동일한 원천 데이터로 사용해 <strong>실시간 조회와 통계의 불일치 가능성을 줄입니다.</strong> 내려받기는 1만 행을 넘으면 <strong>스트리밍 방식</strong>으로 내보내 메모리에 전부 올리지 않습니다</span></div>
+          <div class="em"><span>엑셀 업로드/다운로드</span><span>공고 요구대로 <strong>상품·주문·거래처 단가·송장 4종</strong>의 업로드를 지원합니다(주문은 전화·팩스로 받은 주문의 일괄 등록용이며, 업로드된 주문에도 3단 가격 조회와 MOQ 검증이 동일하게 걸립니다). 업로드는 <strong>전 행을 검증한 뒤 한 건이라도 오류가 있으면 전체를 반영하지 않고</strong>, <strong>오류 행 번호와 사유를 기재한 결과 파일</strong>을 반환합니다</span></div>
+          <div><span>관리자 계정·권한 구분</span><span>관리자 권한을 <strong>최고관리자 / 운영자(주문·배송) / 상품담당(상품·가격)</strong> 3종으로 나누고, 가격 변경은 상품담당 이상만 가능하게 합니다. <strong>가격 변경 이력에는 항상 변경자가 기록</strong>됩니다</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <h3 class="sub rv">화면 구성 — 42화면</h3>
+    <div class="grid g2 rv" data-d="40">
+      <div>
+        <div class="gc-k">사용자 (거래처) · <b>24</b>화면</div>
+        <p class="gc-d">① 로그인 ② 회원가입 ③ 가입 완료 안내 ④ 비밀번호 재설정 ⑤ 홈 ⑥ 상품 목록(카테고리·전체·검색 결과 통합) ⑦ 상품 상세 ⑧ 장바구니 ⑨ 대량 담기 ⑩ 견적 요청 ⑪ 견적 목록 ⑫ 견적 상세 ⑬ 주문서 작성 ⑭ 결제 ⑮ 주문 완료 ⑯ 주문 목록 ⑰ 주문 상세 ⑱ 배송 현황 ⑲ 취소·반품 요청 ⑳ 마이페이지(회사·담당자·세금계산서·<strong>배송지 주소록</strong> 탭) ㉑ 공지·FAQ ㉒ 문의 목록 ㉓ 상품 문의 작성 ㉔ 주문 문의 작성</p>
+      </div>
+      <div>
+        <div class="gc-k">관리자 · <b>18</b>화면</div>
+        <p class="gc-d">① 로그인 ② 대시보드 ③ 회원 승인(목록·상세) ④ 거래처 관리(목록·상세·등급·권한) ⑤ 거래처별 단가 관리 ⑥ 상품 관리(목록·등록·상세) ⑦ 카테고리·재고 관리 ⑧ 견적 관리(요청 목록·작성·상세) ⑨ 주문 관리(목록·상세) ⑩ 입금 확인 ⑪ 배송·송장 관리 ⑫ 취소·반품 처리 ⑬ 통계(기간별 매출·거래처별·상품별 탭) ⑭ 엑셀 업로드 센터 ⑮ 알림 발송 이력 ⑯ 콘텐츠 관리(공지·FAQ·문의 탭) ⑰ 배너 관리 ⑱ 관리자 계정·권한</p>
+      </div>
+    </div>
+    <p class="cap rv">공고 기능을 개별 화면으로 나누면 <strong>51화면</strong>이지만, 관련 기능을 통합해 <strong>42화면</strong>으로 구성했습니다. 괄호 안의 목록·상세·탭은 같은 화면 안에서 전환되는 하위 보기이므로 별도 화면 수에 포함하지 않습니다. 절감한 11 MD는 표 2에 반영했습니다. <strong>화면 분리는 G2(25일차) 전까지 조정 가능</strong>하며, 화면 1개 추가는 설계·디자인·개발 합산 약 1.2 MD입니다. 전 화면은 PC·태블릿·모바일 반응형(Chrome·Safari·Edge)으로 제공합니다.</p>
+
+    <h3 class="sub rv">제외 범위 (1차 미포함)</h3>
+    <p class="rv" style="max-width:74ch">범위와 인수 기준을 명확히 하기 위해 다음 항목을 1차 범위에서 제외합니다.</p>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(250px,1fr) minmax(280px,1.2fr)">
+        <div class="hd"><b>제외 항목</b><b>제외 사유 / 후속 적용 시점</b></div>
+        <div><span>ERP·물류·회계 시스템 연동</span><span>공고에서 2차로 명시. 1차에 외부 코드 필드와 이벤트 훅을 준비</span></div>
+        <div><span>전자세금계산서 발행</span><span>공고에서 2차로 명시. 1차는 발행용 정보 등록·조회까지</span></div>
+        <div><span>사업자등록번호 자동 진위 확인</span><span>공고에서 2차로 명시. 1차에 검증 상태 필드를 준비</span></div>
+        <div><span>택배사 API 실시간 배송 추적</span><span>1차는 송장번호 등록 + 택배사 조회 페이지 링크 안내</span></div>
+        <div><span>가상계좌 자동 입금 확인 / 카카오 알림톡 / 후불 외상 한도 / 자료 이관 대행</span><span><strong>별도 견적</strong> — 「04 기간·예산」 탭 3</span></div>
+        <div><span>다국어 · 해외 배송 · 해외 결제</span><span>공고 미기재</span></div>
+        <div><span>모바일 앱 (iOS·Android)</span><span>공고는 반응형 웹 범위</span></div>
+        <div><span>상품 이미지 촬영·보정, 상세 페이지 콘텐츠 제작</span><span>발주사 제공 전제</span></div>
+        <div><span>기존 데이터 정제·표준화</span><span>표준 양식 업로드는 포함, 정제는 별도 견적 D</span></div>
+        <div><span>PG 가맹 계약·심사 대행</span><span>발주사 명의 신청, 당사는 절차 지원과 기술 연동 담당</span></div>
+      </div>
+    </div>
+
+    <h4 class="sub-n rv">1차 범위 조정 내용 — 기능은 수행하되 아래 깊이까지는 하지 않습니다</h4>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(104px,.4fr) minmax(300px,2fr)">
+        <div class="hd"><b>기능</b><b>이번에 하지 않는 것</b></div>
+        <div><span>상품</span><span><strong>옵션·규격 조합 미지원</strong> (상품 1건 = SKU 1개), 카테고리 <strong>2단 고정</strong>(무한 트리 미지원)</span></div>
+        <div><span>주문·반품</span><span><strong>부분 반품·부분 환불 미지원</strong> (전량 단위). PG 결제 수단 <strong>카드·계좌이체 2종</strong></span></div>
+        <div><span>배송</span><span><strong>부분 출고·분할 배송 미지원</strong> (주문 1건 = 출고 1건)</span></div>
+        <div><span>가격</span><span><strong>기간 한정 특가·수량 구간별 단가 미포함</strong> (거래처 개별 단가 + 등급 할인까지)</span></div>
+        <div><span>장바구니</span><span>장바구니 <strong>1개</strong> (즐겨찾기 주문서 다중 저장 미포함)</span></div>
+        <div><span>견적</span><span>견적서 <strong>PDF 서식 1종</strong>, 다중 버전 견적 비교 화면 없음</span></div>
+        <div><span>통계</span><span><strong>고정 리포트 3종</strong> (기간별 매출·거래처별·상품별). 사용자 정의 리포트 빌더 없음</span></div>
+        <div><span>권한</span><span>관리자 권한 <strong>3종 고정</strong>. 권한을 화면에서 세분 편집하는 UI 없음</span></div>
+        <div><span>배너</span><span>홈 상단 <strong>1개 영역</strong></span></div>
+        <div><span>알림</span><span>이메일 템플릿 문구 변경은 <strong>배포로 반영</strong> (템플릿 관리 화면 없음)</span></div>
+        <div><span>디자인</span><span>시안 <strong>1안</strong> 제시 (2안 비교 없음), 커스텀 일러스트·아이콘 제작 없음, 클릭 가능한 프로토타입 없음</span></div>
+        <div><span>인프라</span><span><strong>단일 리전 단일 애플리케이션 인스턴스</strong> (이중화·오토스케일링 없음). RDS 자동 백업과 복원 절차를 제공하지만 장애 시 복구 시간이 발생할 수 있음</span></div>
+        <div><span>QA</span><span>브라우저 3종 전수 검증은 <strong>가격·견적·주문·결제 경로(핵심 18화면)</strong>. 나머지 24화면은 Chrome 전수 + Safari·Edge 레이아웃 확인</span></div>
+        <div><span>화면 구성</span><span>공고 기능 기준 51화면을 <strong>42화면으로 통합</strong>(「화면 구성 — 42화면」). 신상품·추천은 홈 섹션과 목록 필터로, 공지·FAQ는 한 화면의 탭으로, 마이페이지 4개 정보 화면은 탭으로 묶습니다</span></div>
+        <div><span>문의</span><span>답변 <strong>템플릿·자동 분류 미포함</strong> (답변은 매건 직접 작성)</span></div>
+        <div><span>프로모션</span><span>배너·공지를 통한 <strong>안내형 프로모션</strong>까지. 기간 한정 특가·수량 구간별 할인 등 <strong>가격을 바꾸는 프로모션은 미포함</strong></span></div>
+      </div>
+    </div>
+    <p class="cap rv"><strong>G2(25일차) 전까지 총 MD 112.0을 유지하는 범위 교환은 추가 비용이 없습니다.</strong></p>
+  </div>
+</section>
+
+<!-- ====================== 09 품질·유지보수 ====================== -->
+<section class="sec" id="s9">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">09</span>
+      <h2>무엇이 확인되어야 <span class="hl">완료</span>인가</h2>
+      <p class="sec-lead">공고 「필수 사항 2번」에 대한 답변입니다. 요구 기능이 구현되었다는 사실만으로는 충분하지 않습니다. 다음 다섯 가지가 확인되어야 프로젝트가 완료된 것으로 판단합니다.</p>
+    </div>
+
+    <ol class="chk rv" data-d="40">
+      <li><div class="chk-body"><b>고객사가 제공하고 사용을 승인한 실제 거래처 3곳 이상, 실제 상품 50종 이상의 단가 데이터로</b> 견적 → 주문 → 결제 → 배송 완료까지 전체 흐름을 검증할 것<br><span style="color:var(--faint);font-size:13px">테스트 데이터만으로는 발견하기 어려운 실제 단가 체계의 예외를 오픈 전에 확인하기 위함입니다</span></div></li>
+      <li><div class="chk-body"><b>마스터 단가를 바꾼 뒤 과거 주문 100건을 재조회했을 때 금액이 100% 그대로일 것</b><br><span style="color:var(--faint);font-size:13px">귀사가 밝힌 핵심 우려를 직접 검증하는 항목이며, 미충족 시 최종 인수 기준을 충족하지 못한 것으로 판정합니다</span></div></li>
+      <li><div class="chk-body"><b>귀사 운영 담당자가 당사 도움 없이</b> 상품 등록 · 단가 변경 · 견적서 작성 · 입금 확인 · 송장 등록을 각 1회씩 수행할 것<br><span style="color:var(--faint);font-size:13px">운영 담당자가 매뉴얼만으로 주요 업무를 수행할 수 있는지 확인하기 위함입니다</span></div></li>
+      <li><div class="chk-body">거래처 계정으로 <b>타사 가격·주문에 접근이 차단</b>되고, 시도가 감사 로그에 남을 것<br><span style="color:var(--faint);font-size:13px">B2B에서 가격 노출은 금전 문제이자 신뢰 문제입니다</span></div></li>
+      <li><div class="chk-body">고객사 맞춤 소스코드·스키마·배포 절차서와 외부 구성요소 목록이 <b>귀사 저장소에 들어가 있고</b>, 당사 없이 재배포되는 것을 확인할 것<br><span style="color:var(--faint);font-size:13px">납품 이후 다른 운영 주체가 인수할 수 있는 상태인지 확인하기 위함입니다</span></div></li>
+    </ol>
+
+    <h3 class="sub rv">인수 기준 — 측정 조건과 합격선 (14항목)</h3>
+    <p class="rv" style="max-width:74ch">상위 6항목(가격 정합성)은 「02 핵심 설계」에 있습니다. 나머지 8항목입니다.</p>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(150px,.8fr) minmax(300px,1.5fr) minmax(190px,1fr)">
+        <div class="hd"><b>항목</b><b>측정 조건</b><b>합격 기준</b></div>
+        <div><span>주문 목록 조회</span><span>5년 누적 주문 상세 60만 행 적재, 동시 접속 20명. <strong>S1에서 확정한 EC2·RDS 사양, 서울 리전, 동일 테스트 도구·네트워크 조건</strong>에서 서버 API 응답시간 측정(브라우저 렌더링·외부 서비스 지연 제외)</span><span><strong>p95 API 응답 1초 이내</strong></span></div>
+        <div><span>상품 검색 (3단 가격 조회 포함)</span><span>상품 5,000종, <strong>거래처 단가 예외 5만 행</strong> 적재. 위와 동일한 인프라·측정 범위 적용</span><span><strong>p95 API 응답 1초 이내</strong></span></div>
+        <div><span>엑셀 내려받기</span><span>1개월분 주문 10,000행</span><span><strong>5초 이내 다운로드 시작</strong></span></div>
+        <div class="em"><span><strong>엑셀 업로드 반려</strong></span><span>1,000행 중 1행 오류</span><span><strong>전 행 미반영</strong> + 오류 행 번호·사유 결과 파일 반환</span></div>
+        <div><span>입금 기한 자동 취소</span><span>기한 경과 주문 100건</span><span>전 건 취소 + <strong>재고 복원</strong> + 안내 메일 발송, 사유 「입금 기한 초과」 기록</span></div>
+        <div><span>재고 동시성</span><span>재고 10개 상품에 동시 주문 20건</span><span><strong>음수 재고 0건</strong>, 초과분은 주문 실패 처리</span></div>
+        <div><span>반응형</span><span><strong>핵심 18화면</strong>: Chrome·Safari·Edge × PC(1920/1440)·태블릿(768)·모바일(390) 전수 / <strong>나머지 24화면</strong>: Chrome × 3해상도 전수 + Safari·Edge 레이아웃 확인</span><span>페이지 전체에는 가로 스크롤이 발생하지 않으며, 너비가 큰 표만 내부 가로 스크롤 영역으로 처리</span></div>
+        <div><span>보안</span><span>OWASP Top 10 기준 점검 (SQL Injection · XSS · 인증 우회 · 권한 상승)</span><span><strong>중대·높음 등급 취약점 0건</strong>, 비밀번호 평문 저장 0건, 전 구간 HTTPS. 중간·낮음 등급은 조치 또는 잔여 위험·조치 계획 제출</span></div>
+      </div>
+    </div>
+    <p class="cap rv">성능 측정용 데이터 생성 스크립트와 테스트 도구·실행 조건·인프라 사양을 함께 제출해 같은 조건으로 재측정할 수 있게 합니다.</p>
+
+    <h3 class="sub rv">테스트 계획</h3>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(110px,.6fr) minmax(130px,.6fr) minmax(120px,.6fr) minmax(280px,1.7fr)">
+        <div class="hd"><b>구분</b><b>시점</b><b>담당</b><b>내용</b></div>
+        <div><span>단위 테스트</span><span>개발과 동시 (S3~S4)</span><span>백엔드 2명</span><span><strong>가격 산정·MOQ 검증·금액 계산 로직은 테스트 코드 필수.</strong> 나머지는 선택</span></div>
+        <div><span>통합 테스트</span><span>각 기능 완료 시 (S3~S4)</span><span>기획(QA 겸임)</span><span>견적→주문→결제→배송의 전 경로 시나리오</span></div>
+        <div><span>회귀 테스트</span><span>S5 전 기간</span><span>기획 + 프론트 2명</span><span><strong>가격·견적·주문·결제 경로(핵심 18화면)는 브라우저 3종 × 해상도 3종 전수</strong>. 나머지 24화면은 <strong>Chrome × 해상도 3종 전수 + Safari·Edge는 레이아웃 확인만</strong></span></div>
+        <div><span>성능 테스트</span><span>S5 (73~76일차)</span><span>백엔드 수석</span><span>위 인수 기준 조건으로 측정, 스크립트 제출</span></div>
+        <div><span>보안 점검</span><span>S5 (75~78일차)</span><span>백엔드 수석</span><span>OWASP Top 10 체크리스트 + 권한 우회 시도</span></div>
+        <div class="em"><span><strong>인수 시험</strong></span><span>S5 (79~80일차)</span><span>귀사 + 당사 입회</span><span>위 인수 기준 표를 그대로 항목별 합/불 판정</span></div>
+      </div>
+    </div>
+    <div class="qb rv" data-d="40">
+      <span class="lbl">QA 독립성</span>
+      기획(책임)이 QA를 겸임하므로 명세 작성자와 1차 검증자가 동일합니다. 이를 보완하기 위해
+      <strong>인수 시험 시나리오는 기획이 초안을 작성하고, 백엔드(수석)와 PM이 요구사항 정의서와 대조해 교차 검토</strong>한 뒤 확정합니다.
+      특히 완료 조건 5가지와 인수 기준 <strong>14항목은 PM이 직접 판정</strong>해 동일한 해석 오류가 명세와 시험 시나리오에 반복되는 것을 방지합니다.
+    </div>
+
+    <h3 class="sub rv">리스크와 전제</h3>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(190px,.9fr) minmax(190px,.85fr) minmax(280px,1.5fr)">
+        <div class="hd"><b>리스크</b><b>영향</b><b>대응</b></div>
+        <div class="em"><span><strong>예산 대비 요구 범위 과다 (추정 하한의 60.5%)</strong></span><span>세부 기능까지 모두 수행할 경우 품질 저하</span><span>상위 기능군은 유지하고 세부 깊이를 제한. 1차 설계에서 2차 확장 구조를 고려해 재작업 최소화</span></div>
+        <div><span><strong>단일 리전·단일 애플리케이션 인스턴스</strong></span><span>인스턴스 또는 리전 장애 시 서비스 중단·복구 시간 발생</span><span>RDS 자동 백업·복원 절차와 배포 재현 문서 제공. 목표 RPO·RTO와 복원 시험 범위는 S1에서 확정하고, 고가용성은 2차 범위로 협의</span></div>
+        <div class="em"><span><strong>기획 인력 1명 — 병렬화 불가</strong></span><span>S1·S2 지연 시 전 단계 연쇄 지연</span><span>G1·G2 승인 회신 <strong>5영업일</strong> 전제, 예비 7일 확보, S1 인터뷰 일정을 계약 즉시 확정</span></div>
+        <div><span><strong>PG 가맹 심사 2~4주 또는 추가 보완 요청</strong></span><span>실결제 검증 지연</span><span>필수 서류·정책·심사용 화면을 사전 준비해 <strong>1일차 신청</strong>, 심사 중 샌드박스 병행 개발. PG사 보완·반려는 발생 일수와 영향 범위를 확인해 일정 협의</span></div>
+        <div><span><strong>아이디어 단계 기획 — 규칙이 문서화되어 있지 않음</strong></span><span>요구사항 해석 차이로 재작업</span><span>S1에 현업 인터뷰를 넣고, <strong>가격·MOQ·견적 전환은 별도 규칙 정의서로 분리</strong>해 G2에서 단독 승인</span></div>
+        <div><span><strong>규모 수치 미제공 (거래처·상품·주문 건수)</strong></span><span>인덱스·엑셀 처리 방식 재설계</span><span>규모 가정값을 S1에 검증. 가정의 5배를 넘으면 변경 절차로 협의</span></div>
+        <div><span>기존 자료가 여러 파일에 흩어져 있음</span><span>초기 데이터 적재 지연</span><span>표준 업로드 양식 + <strong>검증 리포트</strong>를 기본 범위에 포함. 정제가 필요하면 별도 견적 D</span></div>
+        <div><span>디자인 레퍼런스 미확정</span><span>디자인 재작업</span><span><strong>G2까지 레퍼런스 확정</strong> 요청. S3 착수 전 시안 1종 사전 확인</span></div>
+        <div><span>후불 거래처 존재 여부 미확정</span><span>뒤늦은 도입 시 소급 보정</span><span>별도 견적 C를 <strong>계약 시 확정</strong> 요청</span></div>
+      </div>
+    </div>
+    <h4 class="sub-n rv">전제 조건</h4>
+    <ul class="rv" style="max-width:74ch;font-size:14.5px">
+      <li>요구사항 정의서와 화면 설계서는 <strong>G1·G2 승인본이 최종본</strong>이며, 이후 변경은 변경 절차를 따릅니다.</li>
+      <li>귀사의 승인·확인 요청 회신은 <strong>5영업일 이내</strong>입니다.</li>
+      <li>서버·도메인·PG 계정은 <strong>발주사 명의로 생성</strong>되며, 비용은 발주사 부담입니다(공고 명시).</li>
+      <li>이메일 발송을 위한 <strong>발신 도메인과 DNS 설정 권한(AWS SES 인증 포함)</strong>은 S3 시작 전까지 발주사가 제공합니다.</li>
+      <li>상품 이미지와 상세 페이지 콘텐츠는 발주사가 제공합니다.</li>
+      <li>실제 데이터 인수 시험에 사용할 거래처 3곳 이상과 상품 50종 이상의 자료, 테스트 참여자 및 필요한 개인정보 이용 동의는 <strong>G4 전까지</strong> 발주사가 확보합니다.</li>
+      <li>소스 저장소는 발주사 소유이며, 당사 개발자 계정 발급이 착수 전 완료됩니다.</li>
+    </ul>
+
+    <h3 class="sub rv">커뮤니케이션과 귀사 준비 사항</h3>
+    <div class="grid g2 rv" data-d="40">
+      <div>
+        <div class="gc-k">보고 체계</div>
+        <p class="gc-d">· <strong>주 1회</strong> 온라인 회의 30분 (당사 PM·기획 + 귀사 PM) — 진행률, 이슈, 다음 주 계획<br>
+        · <strong>주 1회</strong> 주간 보고서 (귀사 PM + 결정권자) — 산출물 링크, <strong>결정 요청 목록과 회신 기한</strong><br>
+        · <strong>단계 종료 시</strong> 시연 + 승인 요청 (결정권자) — 게이트 승인 G1~G5<br>
+        · <strong>수시</strong> 메신저 채널 — <strong>영업시간 기준 4시간 이내 1차 회신</strong></p>
+        <p class="gc-d" style="margin-top:11px">개발 서버는 <strong>S3 시작 시점(26일차)부터 상시 공개</strong>합니다. 이슈 트래커·문서 공유·Swagger UI·개발 서버 계정을 모두 발급해 진행 상황을 직접 확인할 수 있도록 합니다.</p>
+      </div>
+      <div>
+        <div class="gc-k">귀사 준비 사항 — 일정 영향이 있는 항목</div>
+        <p class="gc-d">· <strong>PG 가맹 계약·심사 신청</strong> (귀사 명의, 통상 2~4주) — <strong>1일차 신청 목표</strong><br>
+        · 서버·도메인 계정 개설 (1주) — <strong>26일차(S3)까지</strong><br>
+        · 이메일 발신 도메인·DNS 권한 제공 (1일) — <strong>26일차(S3)까지</strong><br>
+        · 현업 담당자 인터뷰 (2~3일) — <strong>1~5일차 필수</strong>, 지연 시 전 일정 이동<br>
+        · 거래처·상품·단가 자료 제공 (1~2주 취합) — <strong>G2(25일차)까지</strong><br>
+        · 디자인 레퍼런스 확정 (3~5일) — <strong>G2(25일차)까지</strong><br>
+        · 상품 이미지·상세 콘텐츠 (2~3주) — <strong>60일차까지</strong><br>
+        · 인수 시험용 실제 거래처 3곳·상품 50종 데이터와 참여자 확보 — <strong>G4(70일차)까지</strong><br>
+        · 소스 저장소 개설 + 당사 계정 발급 (1일) — <strong>착수 전</strong><br>
+        · 미확정 4건 최종 결정 (협의 회의 1회) — <strong>계약 시</strong><br>
+        · 게이트 승인 회신 — <strong>각 5영업일 이내</strong>, 초과 시 그만큼 후속 일정 이동<br>
+        · 운영 담당자 교육 참석 (2시간) — 오픈 후 2주 내</p>
+      </div>
+    </div>
+
+    <h3 class="sub rv">변경 절차와 담당자</h3>
+    <div class="grid g2 rv" data-d="40">
+      <div>
+        <div class="gc-k">변경 절차</div>
+        <p class="gc-d" style="font-family:var(--mono);font-size:12.5px;background:var(--bg-alt);border:1px solid var(--hair);padding:12px 13px;margin-bottom:12px">변경 요청 접수 → 영향 분석(공수·일정·금액) <strong>2영업일 내 회신</strong><br>→ 귀사 승인 → 범위 조정(다른 항목 축소) 또는 추가 계약 → 반영</p>
+        <p class="gc-d">· <strong>G2 이전</strong>: 승인된 총 112.0 MD 안에서 규칙·화면 변경을 반영합니다. 공수가 늘어나는 경우에는 다른 항목과 범위를 교환합니다.<br>
+        · <strong>G2 이후</strong>: 위 절차를 따릅니다. 참고로 <strong>화면 1개 추가는 약 1.2 MD</strong>, 가격 규칙 1개 추가는 약 <strong>0.5~1.5 MD</strong>입니다.<br>
+        · 기존 기능과 업무 로직에 영향을 주지 않는 <strong>소규모 변경(문구·배치·색상 등)은 배정된 공수 안에서 별도 변경 절차 없이</strong> 반영합니다.</p>
+      </div>
+      <div>
+        <div class="gc-k">담당자</div>
+        <p class="gc-d">· <strong>PM (총괄·의사결정)</strong> — 대표이사 · 전용 채널 + 직통 연락처 (계약 시 제공)<br>
+        · <strong>기획 (일상 협의 창구)</strong> — 기획 책임 / 10년 · 전용 채널 — 영업시간 기준 4시간 이내 1차 회신<br>
+        · <strong>기술 (아키텍처·장애)</strong> — 백엔드 수석 / 20년 · 전용 채널<br>
+        · <strong>부재 시 대체</strong> — PM → 기획 책임 / 기술 → 백엔드 차석 (채널 동일)</p>
+      </div>
+    </div>
+
+    <h3 class="sub rv">하자보수와 유지보수의 구분</h3>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(112px,.5fr) minmax(280px,1.5fr) 92px minmax(180px,.9fr)">
+        <div class="hd"><b>구분</b><b>대상</b><b>비용</b><b>기간</b></div>
+        <div class="em"><span><strong>하자보수</strong></span><span>인수 기준을 충족하지 못한 결함, 명세대로 동작하지 않는 오류</span><span><strong>무상</strong></span><span><strong>검수 완료 후 6개월</strong><br>(제시안. 최종 기간은 계약 조건에 따라 확정)</span></div>
+        <div><span><strong>유지보수</strong></span><span>기능 추가·변경, 외부 정책 대응, 운영 지원, 성능 튜닝</span><span>유상 (별도 계약)</span><span>협의</span></div>
+      </div>
+    </div>
+    <div class="pills rv" data-d="40">
+      <span class="pill k">주문 금액이 견적 금액과 다르게 계산된다 → 하자보수 (무상)</span>
+      <span class="pill k">MOQ 검증이 최종 확정 단계에서 작동하지 않는다 → 하자보수 (무상)</span>
+      <span class="pill">거래처 등급을 3단계에서 5단계로 늘리고 싶다 → 유지보수 (유상)</span>
+      <span class="pill">입금 기한을 3일에서 5일로 → 설정값이면 무상, 코드 변경이면 유지보수</span>
+    </div>
+
+    <h4 class="sub-n rv">대응 시간</h4>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:86px minmax(240px,1.3fr) minmax(112px,.55fr) minmax(160px,.8fr)">
+        <div class="hd"><b>등급</b><b>정의</b><b>접수</b><b>조치</b></div>
+        <div class="em"><span><strong>긴급</strong></span><span>서비스 전면 중단, <strong>주문 금액 오산출</strong>, 타사 가격 노출</span><span>1시간 이내</span><span><strong>4시간 이내 임시 조치</strong></span></div>
+        <div><span>높음</span><span>주요 기능 사용 불가, 우회 수단 없음 (결제·견적 전환 등)</span><span>4시간 이내</span><span>영업일 2일 이내</span></div>
+        <div><span>보통</span><span>일부 화면 오류, 우회 가능</span><span>영업일 1일</span><span>영업일 5일 이내</span></div>
+        <div><span>문의</span><span>사용 방법, 데이터 확인</span><span>영업일 1일</span><span>협의</span></div>
+      </div>
+    </div>
+    <p class="cap rv"><strong>접수 창구</strong> — 전용 메신저 채널 / 이슈 트래커 / 긴급 연락처(PM + 백엔드 수석, 계약 시 제공). 위 세 경로는 무상 하자보수 기간 동안 운영하며, 영업시간과 긴급 연락 기준은 계약 시 확정합니다.</p>
+
+    <h4 class="sub-n rv">유상 유지보수 — 두 가지 안</h4>
+    <div class="grid g2 rv" data-d="40">
+      <div>
+        <div class="gc-k">방식 ① · 권장</div>
+        <div class="gc-t">월 정액</div>
+        <p class="gc-d"><strong>산정</strong> 개발 금액의 일정 비율 / 월 (계약 시 협의)<br><strong>적합</strong> 정기 변경이 예상되고 대응 시간을 보장받고 싶을 때 — <strong>2차 고도화를 예정하고 계시므로 월 정액 방식을 권합니다</strong><br><strong>포함</strong> 위 대응 시간 보장, <strong>월 5 MD 이내 소규모 변경</strong>, 월간 점검 보고 (접속·오류·성능)</p>
+      </div>
+      <div>
+        <div class="gc-k">방식 ②</div>
+        <div class="gc-t">건당</div>
+        <p class="gc-d"><strong>산정</strong> 요청별 공수 산정 후 승인 → 수행<br><strong>적합</strong> 변경 빈도가 낮을 때<br><strong>포함</strong> 요청 건 개발. 대응 시간은 건별 협의</p>
+      </div>
+    </div>
+    <p class="cap rv">금액은 제안 단계에서 확정하지 않고 <strong>산정 방식만</strong> 제시합니다. 월 정액에는 <strong>월 5 MD 이내</strong>의 작업량 상한을 두어 범위 해석의 차이를 예방합니다. 계약 기간은 6개월 또는 12개월 단위, 종료 30일 전 통보로 갱신·해지합니다. <strong>무상 하자보수 6개월과 유상 유지보수는 병행 가능</strong>합니다.</p>
+
+    <h4 class="sub-n rv">이관</h4>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(150px,.7fr) minmax(320px,1.8fr)">
+        <div class="hd"><b>시점</b><b>넘기는 것</b></div>
+        <div><span><strong>개발 착수부터 상시</strong></span><span>소스코드 (귀사 저장소에 직접 커밋 — 완료 후 일괄 전달 아님)</span></div>
+        <div><span><strong>최종 검수 시 (G5)</strong></span><span>Git 이력 전체, 빌드·배포 절차서, 환경 변수 목록, DB 스키마·마이그레이션 스크립트, API 명세(OpenAPI)</span></div>
+        <div><span><strong>최종 검수 시 (G5)</strong></span><span>관리자 운영 매뉴얼, 계정·권한 체계 설명서, 인수 시험 결과서</span></div>
+        <div><span><strong>오픈 후 2주 내</strong></span><span>운영 담당자 교육 1회 (2시간, <strong>녹화본 제공</strong>)</span></div>
+        <div><span><strong>무상 기간 종료 시</strong></span><span>운영 이력 정리, 잔여 이슈 목록, 2차 고도화 시 유의 사항</span></div>
+      </div>
+    </div>
+
+    <div class="qb rv" data-d="40">
+      <span class="lbl">종속 방지</span>
+      특정 업체만 유지보수할 수 있는 구조로 만들지 않겠습니다. 표준 프레임워크를 우선 사용하고, 외부 라이브러리와 자체 보유 범용 모듈은 라이선스·구성 목록을 제공합니다.
+      알림 발송·입금 확인·PG 연동은 어댑터로 분리해 다른 서비스로 교체할 때 업무 로직의 변경 범위를 최소화합니다.
+      <strong>당사는 2차 과업의 당사 수주를 전제로 1차를 설계하지 않습니다.</strong> API 명세와 ERD를 기계 판독 가능한 형태로 제공해, 귀사가 2차 수행사를 자유롭게 선택할 수 있게 합니다.
+    </div>
+    <p class="cap rv"><strong>권리 귀속</strong> — 본 과업을 위해 새로 제작한 고객사 맞춤 산출물과 소스코드의 권리는 대금 완납 후 귀사에 귀속됩니다. 오픈소스·상용 라이브러리·당사가 과업 이전부터 보유한 범용 모듈은 각 라이선스와 기존 권리를 따르며, 납품물에 포함된 구성요소와 라이선스 목록을 함께 제공합니다. 귀사가 납품 시스템을 운영·수정하거나 다른 업체에 이관하는 데 필요한 사용 권한은 제한하지 않습니다.</p>
+  </div>
+</section>
+
+<!-- ====================== 종결 ====================== -->
+<section class="end" id="end">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="sec-no">부록</span>
+      <h2>공고 「제안 포함 필수 사항」 5개 대조표</h2>
+      <p class="sec-lead">공고에서 제안서에 포함하도록 요청한 다섯 항목이 이 문서의 어디에 있는지 정리했습니다.</p>
+    </div>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:40px minmax(240px,1.1fr) minmax(300px,1.6fr)">
+        <div class="hd"><b class="c">#</b><b>공고 요구</b><b>이 제안서의 위치</b></div>
+        <div><span class="c num">1</span><span>적합한 기술 스택과 선택 이유, 확장·유지보수가 쉬운 구조</span><span><a href="#s7"><strong>07 기술 제안</strong></a> — 스택별 선택 이유 + 2차 확장 대비 표</span></div>
+        <div><span class="c num">2</span><span>어떤 부분이 완료되어야 성공적으로 마무리되었다고 보는지</span><span><a href="#s9"><strong>09 품질·유지보수</strong></a> — 완료 조건 5가지</span></div>
+        <div><span class="c num">3</span><span>미확정 4건의 포함 여부 의견 + 제외 시 후속 확장 방법 + <strong>별도 견적 분리</strong></span><span><a href="#s4"><strong>04 기간·예산</strong></a> 탭 3 — 항목별 의견·후속 방법·독립 견적 / <a href="#s1">01 확인 필요 사항</a></span></div>
+        <div><span class="c num">4</span><span><strong>거래처별 가격·MOQ·견적→주문 흐름을 어떻게 설계하고 검증할지</strong></span><span><a href="#s2"><strong>02 핵심 설계</strong></a> — 설계 ①~⑥ + 인수 기준 상위 6항목 / <a href="#s8">08 개발 범위</a> 탭 2-2·2-3</span></div>
+        <div><span class="c num">5</span><span>B2B·커머스 구축 경험과 <strong>PG 연동 경험</strong> + 사용 기술 스택, 오픈 후 유지보수 협의 가능 여부</span><span><a href="#s3"><strong>03 유사 실적</strong></a> — 실적 3건에 참여 기간·참여율·관련 기술을 기재. PG 직접 연동(마이카드·엑솔라·포트원)의 확인 가능한 참여 구간은 <strong>2024.01 ~ 2026.07(2년 6개월)</strong>이며, 빌링 시스템 참여 기간은 9년입니다. <strong>B2B 도매 쇼핑몰과 동일한 업종의 직접 구축 실적은 없다는 점을 명시</strong>했고, 유지보수 방안은 <a href="#s9">09</a>에 제시했습니다</span></div>
+      </div>
+    </div>
+
+    <h3 class="sub rv" style="border-left-color:var(--coral-300);color:#fff">규모 가정 (공고 미기재 항목)</h3>
+    <p class="sec-lead rv" style="margin-bottom:17px">공고에 거래처 수·상품 수·주문 건수가 없어 아래 값을 가정하고 설계했습니다. <strong style="color:#fff">S1에서 검증</strong>하며, 가정이 크게 다르면 변경 절차로 협의합니다.</p>
+    <div class="tbl-x rv" data-d="40">
+      <div class="tbl" style="grid-template-columns:minmax(160px,.85fr) minmax(150px,.8fr) minmax(130px,.7fr) minmax(250px,1.4fr)">
+        <div class="hd"><b>항목</b><b>가정값</b><b>5년 누적</b><b>가정이 틀리면 달라지는 것</b></div>
+        <div><span>거래처 수</span><span>300곳</span><span>—</span><span>3,000곳을 넘으면 단가 예외 조회에 캐시 계층 검토</span></div>
+        <div><span>취급 상품 수</span><span>5,000종</span><span>—</span><span>5만 종을 넘으면 검색에 전문 검색 엔진 검토</span></div>
+        <div><span>일 평균 주문</span><span>50건 (연 300영업일)</span><span>주문 헤더 <strong>75,000행</strong><br>(50 × 300 × 5)</span><span>일 500건을 넘으면 주문 테이블 월별 아카이빙 검토</span></div>
+        <div><span>주문당 품목</span><span>8종</span><span>주문 상세 <strong>600,000행</strong><br>(75,000 × 8)</span><span>—</span></div>
+        <div><span>거래처 단가 예외</span><span><strong>3~5만 행</strong><br>(실제 등록되는 예외만)</span><span><strong>50,000행</strong></span><span>3단 조회를 쓰므로 전 조합을 만들지 않습니다. 전 조합을 만들 경우의 상한은 300 × 5,000 = <strong>1,500,000행</strong></span></div>
+        <div class="tot"><span><strong>합계</strong><br>(3단 조회 적용 · 설계 기준)</span><span></span><span><strong>약 72만 행</strong></span><span><strong>복합 인덱스만으로 충족. 파티셔닝·샤딩·캐시 계층 불필요</strong></span></div>
+        <div><span>참고 — 전 조합 생성 시 최악값</span><span></span><span>약 218만 행</span><span>전 조합을 생성하는 경우에도 <strong>복합 인덱스로 대응할 수 있어 파티셔닝·샤딩·캐시 계층은 필요하지 않습니다</strong></span></div>
+      </div>
+    </div>
+
+    <div class="end-foot rv">
+      <div><b>프로젝트</b> B2B 전용 주문·견적 쇼핑몰 자체 구축</div>
+      <div><b>공고</b> 위시켓 158766</div>
+      <div><b>제안 금액</b> 28,000,000원 (부가세 별도)</div>
+      <div><b>제안 기간</b> 87일 · 2026-10-19 ~ 2027-01-13</div>
+      <div><b>작성일</b> 2026-09-29</div>
+      <div>제안 유효 기간은 작성일로부터 30일입니다.</div>
+    </div>
+  </div>
+</section>
+
+<button class="totop" id="totop" type="button" aria-label="맨 위로">
+  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

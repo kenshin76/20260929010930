@@ -1,0 +1,35 @@
+# ── 대외 공개 금지 — 내부 산출물 ────────────────────────────
+# 저장소 루트의 .md 는 README.md 만 공개한다.
+# 파일명을 이름으로 나열하면 macOS 가 저장한 자모 분해형(NFD)과
+# 여기 적은 결합형(NFC)이 어긋나 패턴이 빗나갈 수 있으므로,
+# 정규화 형태와 무관하게 안전한 「전부 제외 + README 만 허용」으로 둔다.
+# 이 규칙이 제안서.md · 요구사항.md 를 함께 막는다.
+/*.md
+!/README.md
+
+# 검증 스크립트 (제안 금액·단가가 상수로 들어 있다)
+/verify.py
+/gen_img.py
+/verify_*.py
+/t_*.js
+/*/verify_*.py
+/*/t_*.js
+
+# 원본 문서 · 대외비 자료
+*.docx
+*.pptx
+*.xlsx
+*.pdf
+design/
+
+# 운영체제 · 편집기
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+node_modules/
